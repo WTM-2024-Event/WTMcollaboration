@@ -28,11 +28,8 @@
     text-align: center;
     @include dFlex(column, space-between, 0);
     flex: 0 0 auto;
-    background-image: linear-gradient(
-      to right bottom,
-      $greenPastel,
-      $bluePastel
-    );
+    background-color: #00dba1b2;
+    border: 0.2rem solid $green;
     border-radius: 1.3rem;
     @include textStyle($white, $montserrat, 1rem, semiregular, 1.5rem);
     @include padding(1rem, 1rem);

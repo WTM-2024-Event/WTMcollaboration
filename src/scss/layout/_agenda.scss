@@ -1,0 +1,74 @@
+.sectionDiary {
+  @include dFlex(column, 0, center);
+}
+
+.titleDiary {
+  @include textStyle($blue, $montserrat, 2rem, bold, 1.5rem);
+  @include margin(0, 2rem);
+  text-transform: uppercase;
+  @media (min-width: 768px) {
+    font-size: 3.5rem;
+  }
+}
+
+.diary {
+  @include dFlex(column, center, 0);
+  @include margin(2rem, 0);
+  @include padding(2rem, 2rem);
+  background-color: rgba(128, 128, 128, 0.151);
+  border-radius: 1.3rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+  &__cel {
+    display: flex;
+    gap: 0.5rem;
+  }
+  &__time {
+    width: 5.8rem;
+    text-align: center;
+    @include dFlex(column, space-between, 0);
+    flex: 0 0 auto;
+    background-image: linear-gradient(
+      to right bottom,
+      $greenPastel,
+      $bluePastel
+    );
+    border-radius: 1.3rem;
+    @include textStyle($white, $montserrat, 1rem, semiregular, 1.5rem);
+    @include padding(1rem, 1rem);
+    &--ent {
+      @include textStyle($white, $montserrat, 1.3rem, bold, 1.5rem);
+      @media (min-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+    @media (min-width: 768px) {
+      font-size: 1.3rem;
+      width: 7rem;
+    }
+  }
+  &__act {
+    @include dFlex (0,center,center);
+    background-image: linear-gradient(
+      to right bottom,
+      $greenPastel,
+      $bluePastel
+    );
+    @include padding (0.6rem,0.6rem);
+    @include textStyle($white, $montserrat, 1.3rem, regular, 1.5rem);
+    cursor: pointer;
+    border-radius: 1.3rem;
+    text-align: center;
+    flex: 1 1 auto;
+    &:hover {
+      background-image: linear-gradient(
+        to right bottom,
+        $bluePastel,
+        $greenPastel
+      );
+    }
+    @media (min-width: 768px) {
+      font-size: 1.7rem;
+    }
+  }
+}

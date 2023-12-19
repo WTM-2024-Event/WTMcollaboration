@@ -1,0 +1,60 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-color: $turquoise;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    padding-inline: 4.5rem;
+    z-index: 10;
+    &_div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &_img{
+            width: 1rem;
+        }
+        &_h1{
+            display: flex;
+            @include textStyle($white, $montserrat, 2rem, $bold, 2);
+            text-transform: uppercase;
+        }
+    }
+    &_nav {
+        display: flex;
+        gap: 5rem;
+        padding-left: 5rem;
+        &_ul{
+            display: flex;
+            flex-direction: row;
+            gap: 5rem;
+            &-li{
+                list-style-type: none;
+                &-a{
+                    text-decoration: none;
+                    @include textStyle($white, $montserrat, 1.5rem, $bold, 2);
+                    text-transform: uppercase;
+                    &:hover{
+                        color: $black;
+                    }
+                }
+            }
+        }
+        &_ull{
+            display: flex;
+            flex-direction: row;
+            gap: 5rem;
+            &-li{
+                list-style-type: none;
+                &-a{
+                    text-decoration: none;
+                    @include textStyle($white, $montserrat, 1.5rem, $bold, 2);
+                    text-transform: uppercase;
+                    &:hover{
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 .sectionDiary {
   @include dFlex(column, 0, center);
+  padding-top: 10rem;
 }
 
 .titleDiary {

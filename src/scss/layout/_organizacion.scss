@@ -1,0 +1,14 @@
+.container {
+  background-image: url('../../images/ada-lovelace.jpeg');
+  width: 960px;
+  height: 500px;
+  background-color: aqua;
+  &_div {
+    width: 160px;
+    height: 50px;
+    background-color: aqua;
+    &_h2 {
+      color: red;
+    }
+  }
+}

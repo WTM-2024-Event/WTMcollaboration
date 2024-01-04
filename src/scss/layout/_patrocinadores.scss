@@ -1,0 +1,14 @@
+.sponsors{
+    margin-block: 5rem;
+    &_title{
+       text-align: center;
+       @include textStyle($blue, $montserrat, 2rem, bold, 1.5rem);
+       margin-bottom: 5rem;
+    }
+    &_img{
+        @include dFlex(0, center, center);
+        flex-wrap: wrap;
+        margin: auto; 
+        gap: 2rem; 
+    }
+}

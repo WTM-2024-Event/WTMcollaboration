@@ -1,4 +1,6 @@
 .header {
+    // display: none;
+    @media (min-width: 1220px) {
     background-image: linear-gradient(to left, $turquoise, $turquoisePastel);
     position: fixed;
     width: 100%;
@@ -47,4 +49,12 @@
             }
         }
     }
+}
+}
+
+
+.toggleMenu {
+    width: 3rem;
+    cursor: pointer;
+    display: none;
 }

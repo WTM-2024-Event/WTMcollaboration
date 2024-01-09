@@ -1,6 +1,5 @@
 .sectionDiary {
   @include dFlex(column, 0, center);
-  //padding-top: 10rem;
   @include padding(0, 10rem);
 }
 
@@ -8,6 +7,7 @@
   @include textStyle($bluePastel, $montserrat, 2rem, bold, 1.5rem);
   @include margin(0, 2.5rem);
   text-transform: uppercase;
+
   @media (min-width: 768px) {
     font-size: 3.5rem;
   }
@@ -17,14 +17,16 @@
   @include dFlex(column, center, 0);
   @include margin(2rem, 0);
   @include padding(2rem, 2rem);
-  background-color: rgba(128, 128, 128, 0.151);
+  background-color: rgba(128, 128, 128, 0.116);
   border-radius: 1.3rem;
   gap: 1rem;
   flex-wrap: wrap;
+
   &__cel {
     display: flex;
     gap: 0.5rem;
   }
+
   &__time {
     width: 5.8rem;
     text-align: center;
@@ -37,34 +39,30 @@
     @include padding(1rem, 1rem);
     &--ent {
       @include textStyle($white, $montserrat, 1.3rem, bold, 1.5rem);
+
       @media (min-width: 768px) {
         font-size: 2rem;
       }
     }
+
     @media (min-width: 768px) {
       font-size: 1.3rem;
       width: 7rem;
     }
   }
+
   &__act {
     @include dFlex(0, center, center);
-    background-image: linear-gradient(
-      to right bottom,
-      $greenPastel,
-      $bluePastel
-    );
+    background-image: linear-gradient(to right bottom,$greenPastel,$bluePastel);
     @include padding(0.6rem, 0.6rem);
     @include textStyle($white, $montserrat, 1.3rem, regular, 1.5rem);
     cursor: pointer;
     border-radius: 1.3rem;
     text-align: center;
     flex: 1 1 auto;
+
     &:hover {
-      background-image: linear-gradient(
-        to right bottom,
-        $bluePastel,
-        $greenPastel
-      );
+      background-image: linear-gradient(to right bottom,$bluePastel,$greenPastel);
     }
     @media (min-width: 768px) {
       font-size: 1.7rem;

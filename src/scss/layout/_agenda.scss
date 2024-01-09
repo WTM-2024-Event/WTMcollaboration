@@ -1,11 +1,12 @@
 .sectionDiary {
   @include dFlex(column, 0, center);
-  padding-top: 10rem;
+  //padding-top: 10rem;
+  @include padding(0, 10rem);
 }
 
 .titleDiary {
-  @include textStyle($blue, $montserrat, 2rem, bold, 1.5rem);
-  @include margin(0, 2rem);
+  @include textStyle($bluePastel, $montserrat, 2rem, bold, 1.5rem);
+  @include margin(0, 2.5rem);
   text-transform: uppercase;
   @media (min-width: 768px) {
     font-size: 3.5rem;
@@ -46,13 +47,13 @@
     }
   }
   &__act {
-    @include dFlex (0,center,center);
+    @include dFlex(0, center, center);
     background-image: linear-gradient(
       to right bottom,
       $greenPastel,
       $bluePastel
     );
-    @include padding (0.6rem,0.6rem);
+    @include padding(0.6rem, 0.6rem);
     @include textStyle($white, $montserrat, 1.3rem, regular, 1.5rem);
     cursor: pointer;
     border-radius: 1.3rem;

@@ -2,7 +2,7 @@
     margin-block: 5rem;
     &_title{
        text-align: center;
-       @include textStyle($bluePastel, $montserrat, 2rem, bold, 1.5rem);
+       @include textStyle($blueM, $montserrat, 2rem, bold, 1.5rem);
        margin-bottom: 5rem;
        @media (min-width: 768px) {
         font-size: 3.5rem;
@@ -20,9 +20,9 @@
     }
     &_button{
         @include dFlex(0, center, center);
-        background-color:$bluePastel;
+        background-color:$blueM;
         border: currentColor;
-        border-radius: 4px;
+        border-radius: 15px;
         padding: 10px 15px; 
         margin-inline: auto;
         margin-block: 5rem; 
@@ -36,8 +36,7 @@
     &_a{
         text-decoration: none;
         :hover{
-            transform: scale(1.1);
-            box-shadow: 0 0 15px $greenPastel;
+            background-color: $turquoise;
             cursor: pointer; 
         }
     }

@@ -1,1 +1,14 @@
-
+.footer{
+    background-color: $turquoise;
+  
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    height: auto;
+    &_section_redes a{
+        color: $white;
+    }
+    &_section_links a {
+        color: $black;
+    }
+}

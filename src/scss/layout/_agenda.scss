@@ -1,10 +1,18 @@
 .sectionDiary {
-  @include dFlex(column, 0, center);
+  @include dFlex(column, 0, 0);
   @include padding(0, 10rem);
+
+  @media (min-width: 768px) {
+    margin-inline: 6rem;
+  }
+  @media (min-width: 768px) {
+    margin-inline: 10rem;
+  }
 }
 
 .titleDiary {
-  @include textStyle($bluePastel, $montserrat, 2rem, bold, 1.5rem);
+  @include dFlex(column, 0, center);
+  @include textStyle($blueM, $montserrat, 2rem, bold, 1.5rem);
   @include margin(0, 2.5rem);
   text-transform: uppercase;
 
@@ -17,7 +25,7 @@
   @include dFlex(column, center, 0);
   @include margin(2rem, 0);
   @include padding(2rem, 2rem);
-  background-color: rgba(128, 128, 128, 0.116);
+  background-color: $background1;
   border-radius: 1.3rem;
   gap: 1rem;
   flex-wrap: wrap;
@@ -32,8 +40,8 @@
     text-align: center;
     @include dFlex(column, space-between, 0);
     flex: 0 0 auto;
-    background-color: #00dba1b2;
-    border: 0.2rem solid $green;
+    background-color: $turquoise;
+    //border: 0.1rem solid $green;
     border-radius: 1.3rem;
     @include textStyle($white, $montserrat, 1rem, semiregular, 1.5rem);
     @include padding(1rem, 1rem);
@@ -53,8 +61,25 @@
 
   &__act {
     @include dFlex(0, center, center);
-    background-image: linear-gradient(to right bottom,$greenPastel,$bluePastel);
-    @include padding(0.6rem, 0.6rem);
+    flex-direction: column;
+    background:$background1;
+    @include padding(2.5rem, 0.6rem);
+    @include textStyle($white, $montserrat, 1.3rem, regular, 1.5rem);
+    border-radius: 1.3rem;
+    text-align: center;
+    flex: 1 1 auto;
+
+    
+    @media (min-width: 768px) {
+      font-size: 1.7rem;
+    }
+  }
+
+  &__presentations {
+    @include dFlex(0, center, center);
+    flex-direction: column;
+    background-image: linear-gradient(to left, $turquoisePastel, $turquoise);
+    @include padding(2.5rem, 1.6rem);
     @include textStyle($white, $montserrat, 1.3rem, regular, 1.5rem);
     cursor: pointer;
     border-radius: 1.3rem;
@@ -62,7 +87,7 @@
     flex: 1 1 auto;
 
     &:hover {
-      background-image: linear-gradient(to right bottom,$bluePastel,$greenPastel);
+      background-image: linear-gradient(to left, $coral, $orangePastel);
     }
     @media (min-width: 768px) {
       font-size: 1.7rem;

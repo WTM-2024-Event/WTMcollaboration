@@ -1,8 +1,10 @@
 .speakers{
+    padding-block: 8rem 5rem; 
+    background-color: $background1;
     margin-block: 5rem;
     &_title{
        text-align: center;
-       @include textStyle($bluePastel, $montserrat, 2rem, bold, 1.5rem);
+       @include textStyle($blueM, $montserrat, 2rem, bold, 1.5rem);
        margin-bottom: 5rem;
        @media (min-width: 768px) {
         font-size: 3.5rem;
@@ -19,7 +21,7 @@
             //filter: drop-shadow(2px 2px 2px $bluePastel);
             //filter: grayscale(50%);
             //filter: opacity(50%);
-            filter: blur(5px);
+            filter: blur(1px);
         }
        
         &_unique{
@@ -36,7 +38,7 @@
     }
     &_button{
         @include dFlex(0, center, center);
-        background-color:$bluePastel;
+        background-color:$blueM;
         border: currentColor;
         border-radius: 4px;
         padding: 10px 15px; 
@@ -52,8 +54,7 @@
     &_a{
         text-decoration: none;
         :hover{
-            transform: scale(1.1);
-            box-shadow: 0 0 15px $greenPastel;
+            background-color: $turquoise;
             cursor: pointer; 
         }
     }

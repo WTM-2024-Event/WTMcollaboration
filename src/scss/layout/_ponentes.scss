@@ -1,0 +1,60 @@
+.speakers{
+    margin-block: 5rem;
+    &_title{
+       text-align: center;
+       @include textStyle($bluePastel, $montserrat, 2rem, bold, 1.5rem);
+       margin-bottom: 5rem;
+       @media (min-width: 768px) {
+        font-size: 3.5rem;
+      }
+    }
+    &_img{
+        @include dFlex(row, center, center);
+        flex-wrap: wrap;
+        margin: auto;
+        gap: 3rem; 
+        :hover{
+            transform: scale(1.1);
+            //filter: brightness(1.1) contrast(1.1);
+            //filter: drop-shadow(2px 2px 2px $bluePastel);
+            //filter: grayscale(50%);
+            //filter: opacity(50%);
+            filter: blur(5px);
+        }
+       
+        &_unique{
+            height: 20rem;
+            width: 20rem;
+            border-radius: 50%;
+           
+        }
+        &_name{
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+    }
+    &_button{
+        @include dFlex(0, center, center);
+        background-color:$bluePastel;
+        border: currentColor;
+        border-radius: 4px;
+        padding: 10px 15px; 
+        margin-inline: auto;
+        margin-block: 5rem; 
+        @include textStyle($white, $montserrat, 2rem, $regular, 1.5rem);
+        @media (min-width: 768px) {
+            font-size: 2.5rem;
+            padding: 15px 20px;
+          }
+        
+    }
+    &_a{
+        text-decoration: none;
+        :hover{
+            transform: scale(1.1);
+            box-shadow: 0 0 15px $greenPastel;
+            cursor: pointer; 
+        }
+    }
+}

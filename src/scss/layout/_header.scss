@@ -1,60 +1,60 @@
 .header {
-    display: flex;
-    align-items: center;
-    background-color: $turquoise;
+    // display: none;
+    @media (min-width: 1220px) {
+    background-image: linear-gradient(to left, $turquoise, $turquoisePastel);
     position: fixed;
     width: 100%;
     height: auto;
     padding-inline: 4.5rem;
     z-index: 10;
-    &_div{
+    &_nav{
         display: flex;
-        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        &_img{
-            width: 1rem;
-        }
-        &_h1{
+        &_div{
             display: flex;
-            @include textStyle($white, $montserrat, 2rem, $bold, 2);
-            text-transform: uppercase;
-        }
-    }
-    &_nav {
-        display: flex;
-        gap: 5rem;
-        padding-left: 5rem;
-        &_ul{
-            display: flex;
-            flex-direction: row;
-            gap: 5rem;
-            &-li{
-                list-style-type: none;
-                &-a{
-                    text-decoration: none;
-                    @include textStyle($white, $montserrat, 1.5rem, $bold, 2);
-                    text-transform: uppercase;
-                    &:hover{
-                        color: $black;
-                    }
+            align-items: center;
+            gap: 4rem;
+            &_logo{
+                display: flex;
+                align-items: center;
+                &-img{
+                    width: 7rem;
+                }
+                &-h1{
+                    @include textStyle(#03a58f, $montserrat, 1.5rem, $bold, 1);
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            &-a{
+                text-decoration: none;
+                @include textStyle($white, $montserrat, 1.5rem, $bold, 2);
+                text-transform: uppercase;
+                &:hover{
+                    color: $black;
                 }
             }
         }
-        &_ull{
+        &_divTwo{
             display: flex;
-            flex-direction: row;
-            gap: 5rem;
-            &-li{
-                list-style-type: none;
-                &-a{
-                    text-decoration: none;
-                    @include textStyle($white, $montserrat, 1.5rem, $bold, 2);
-                    text-transform: uppercase;
-                    &:hover{
-                        color: $black;
-                    }
+            gap: 2rem;
+            &-a{
+                text-decoration: none;
+                @include textStyle($white, $montserrat, 1.5rem, $bold, 2);
+                text-transform: uppercase;
+                &:hover{
+                    color: $black;
                 }
             }
         }
     }
+}
+}
+
+
+.toggleMenu {
+    width: 3rem;
+    cursor: pointer;
+    display: none;
 }

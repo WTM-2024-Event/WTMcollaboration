@@ -1,14 +1,17 @@
 .footer{
-    background-color: $turquoise;
+    background-image: linear-gradient(to left, $turquoise, $turquoisePastel);
   
     padding: 20px;
     display: flex;
     width: 100%;
     height: auto;
-    &_section_redes a{
+    &_section_rrss a{
         color: $white;
     }
     &_section_links a {
         color: $black;
+        font-family: $montserrat;
+        text-decoration: none;
+        text-transform: uppercase;
     }
 }

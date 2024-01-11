@@ -13,10 +13,17 @@
         flex-wrap: wrap;
         margin: auto; 
         gap: 3rem; 
-        :hover{
-            transform: scale(1.1);
-            box-shadow: 0 0 15px $orangePastel;
+        &_unique{
+            width: 25rem;
+            height: 20rem;  
         }
+        &_a{
+            :hover{
+                transform: scale(1.1);
+                filter: grayscale(100%);
+            }
+        }
+        
     }
     &_button{
         @include dFlex(0, center, center);

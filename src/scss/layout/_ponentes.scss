@@ -14,7 +14,7 @@
         @include dFlex(row, center, center);
         flex-wrap: wrap;
         margin: auto;
-        gap: 3rem; 
+        gap: 5rem; 
         :hover{
             transform: scale(1.1);
             //filter: brightness(1.1) contrast(1.1);

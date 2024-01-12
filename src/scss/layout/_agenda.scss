@@ -1,6 +1,6 @@
 .sectionDiary {
   @include dFlex(column, 0, 0);
-  @include padding(0, 10rem);
+  @include padding(0, 4rem);
 
   @media (min-width: 768px) {
     margin-inline: 6rem;
@@ -13,7 +13,7 @@
 .titleDiary {
   @include dFlex(column, 0, center);
   @include textStyle($bluePastel, $montserrat, 2rem, bold, 1.5rem);
-  @include margin(0, 2.5rem);
+  @include margin(0, 3.5rem);
   text-transform: uppercase;
 
   @media (min-width: 768px) {

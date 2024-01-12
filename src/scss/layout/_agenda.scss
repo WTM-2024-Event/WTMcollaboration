@@ -87,7 +87,8 @@
     flex: 1 1 auto;
 
     &:hover {
-      background:$orangePastel;
+      background:$turquoisePastel;
+      color: grey;
     }
     @media (min-width: 768px) {
       font-size: 1.7rem;

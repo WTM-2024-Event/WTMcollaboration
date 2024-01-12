@@ -1,5 +1,7 @@
 .sponsors{
-    margin-block: 5rem;
+    padding-block: 8rem 5rem; 
+    background-color: $turquoiseLight;
+    margin-top: 5rem;
     &_title{
        text-align: center;
        @include textStyle($blueM, $montserrat, 2rem, bold, 1.5rem);

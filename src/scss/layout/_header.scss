@@ -1,5 +1,4 @@
 .header {
-    // display: none;
     @media (min-width: 1220px) {
     background-image: linear-gradient(to left, $turquoise, $turquoisePastel);
     position: fixed;
@@ -49,6 +48,9 @@
                     color: $black;
                 }
             }
+        }
+        &_toggle{
+
         }
     }
 }

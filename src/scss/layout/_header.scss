@@ -7,6 +7,8 @@
     height: auto;
     padding-inline: 4.5rem;
     z-index: 10;
+    // padding-top: 1rem;
+    // padding-bottom: 1rem;
     &_nav{
         display: flex;
         justify-content: space-between;
@@ -19,7 +21,7 @@
                 display: flex;
                 align-items: center;
                 &-img{
-                    width: 7rem;
+                    width: 18rem;
                 }
                 &-h1{
                     @include textStyle(#03a58f, $montserrat, 1.5rem, $bold, 1);

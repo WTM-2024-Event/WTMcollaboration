@@ -1,12 +1,18 @@
 .container {
-  background-image: url('../../images/ada-lovelace.jpeg');
-  width: 960px;
-  height: 500px;
+  padding-block: 8rem 5rem;
+  background-color: $turquoiseLight;
+  margin-top: 5rem;
   &_div {
-    width: 160px;
-    height: 50px;
-    &_h2 {
-      color: red;
+    position: relative;
+    &_figure {
+      position: relative;
+      left: 300px;
+      &_img {
+        @include dFlex(0, center, center);
+        flex-wrap: wrap;
+        margin: auto;
+        gap: 3rem;
+      }
     }
   }
 }

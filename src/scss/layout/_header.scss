@@ -1,4 +1,8 @@
-
+.header{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
 .navbar{
     background-image: linear-gradient(to left, $turquoise, $turquoisePastel);
     width: 100%;
@@ -52,7 +56,7 @@
 @media (max-width: 1220px) {
     .navbar{
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         &_items{
             position: absolute;
             top: 6rem;
@@ -96,16 +100,24 @@
             display: flex !important;
             flex-direction: column;                
             margin: 15px;
+            cursor: pointer;
     }
     .nav_toggle span{
             width: 30px;
             height: 4px;
-            background: white;
+            background: $white;
             margin-bottom: 5px;
             border-radius: 2px;             
             transform-origin: 5px 0px;
             transition: all 0.2s linear;
     }
+    .nav_toggle:hover span{
+        background: $blue;
+    }  
+    .open { 
+        transform: translateX(0) !important
+    }
+    // Botón que forma X para poder cerrar el menú
     .close span {
             transform: rotate(45deg) translate(0px, 0px);
     }
@@ -115,56 +127,6 @@
     .close span:nth-child(3) {
             transform: rotate(-45deg) translate(-5px, 1px);
     }
-    .open { 
-        transform: translateX(0) !important
-    }
+
 }
 
-
-// .header {
-//     @media (min-width: 1220px) {
-//     background-image: linear-gradient(to left, $turquoise, $turquoisePastel);
-//     position: fixed;
-//     width: 100%;
-//     height: auto;
-//     padding-inline: 4.5rem;
-//     z-index: 10;
-//     &_nav{
-//         display: flex;
-//         justify-content: space-between;
-//         align-items: center;
-//         &_logo{
-//             display: flex;
-//             align-items: center;
-//             &-img{
-//                 width: 18rem;
-//             }
-//         }
-//         &_div{
-//             display: flex;
-//             align-items: center;
-//             gap: 4rem;
-//             &-a{
-//                 text-decoration: none;
-//                 @include textStyle($white, $montserrat, 1.5rem, $bold, 2);
-//                 text-transform: uppercase;
-//                 &:hover{
-//                     color: $black;
-//                 }
-//             }
-//         }
-//         &_divTwo{
-//             display: flex;
-//             gap: 2rem;
-//             &-a{
-//                 text-decoration: none;
-//                 @include textStyle($white, $montserrat, 1.5rem, $bold, 2);
-//                 text-transform: uppercase;
-//                 &:hover{
-//                     color: $black;
-//                 }
-//             }
-//         }
-//     }
-// }
-// }

@@ -5,7 +5,6 @@
     position: relative;
     &_figure {
       position: relative;
-      left: 300px;
       &_img {
         @include dFlex(0, center, center);
         flex-wrap: wrap;

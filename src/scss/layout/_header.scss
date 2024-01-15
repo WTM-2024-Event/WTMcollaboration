@@ -1,64 +1,170 @@
-.header {
-    @media (min-width: 1220px) {
+
+.navbar{
     background-image: linear-gradient(to left, $turquoise, $turquoisePastel);
-    position: fixed;
     width: 100%;
-    height: auto;
-    padding-inline: 4.5rem;
-    z-index: 10;
-    // padding-top: 1rem;
-    // padding-bottom: 1rem;
-    &_nav{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        &_div{
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+        &_logo{
+            width: 18rem;
+        }
+        &_items{
             display: flex;
             align-items: center;
-            gap: 4rem;
-            &_logo{
+            gap: 10rem;
+            &:hover ::before{
+                width: 100% !important;
+            }
+            &-menu{
                 display: flex;
-                align-items: center;
-                &-img{
-                    width: 18rem;
-                }
-                &-h1{
-                    @include textStyle(#03a58f, $montserrat, 1.5rem, $bold, 1);
-                    display: flex;
-                    flex-direction: column;
-                }
-            }
-            &-a{
-                text-decoration: none;
-                @include textStyle($white, $montserrat, 1.5rem, $bold, 2);
-                text-transform: uppercase;
-                &:hover{
-                    color: $black;
+                &-a{
+                    margin: 1.5rem;
+                    color: rgb(0, 0, 0);
+                    position: relative;
+                    text-decoration: none;
+                    @include textStyle($white, $montserrat, 1.5rem, $bold, 2);
+                    text-transform: uppercase;
+                    &:hover{
+                        color: black;
+                    }
                 }
             }
-        }
-        &_divTwo{
-            display: flex;
-            gap: 2rem;
-            &-a{
-                text-decoration: none;
-                @include textStyle($white, $montserrat, 1.5rem, $bold, 2);
-                text-transform: uppercase;
-                &:hover{
-                    color: $black;
-                }
+            &-extra{
+                display: flex;
+                &-a{
+                    margin: 1.5rem;
+                    color: rgb(0, 0, 0);
+                    position: relative;
+                    text-decoration: none;
+                    @include textStyle($white, $montserrat, 1.5rem, $bold, 2);
+                    text-transform: uppercase;
+                    &:hover{
+                        color: black;
+                    }
+                }  
             }
+
         }
         &_toggle{
-
+            display: none;
+        }
+} 
+@media (max-width: 1220px) {
+    .navbar{
+        display: flex;
+        justify-content: space-around;
+        &_items{
+            position: absolute;
+            top: 6rem;
+            background: $turquoiseLight;
+            width: 100%;
+            transform: translateX(-100%);
+            transition: 0.3s ease all;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+                &_logo{
+                    width: 14rem;
+                }
+                &-menu{
+                    display: flex;
+                    flex-direction: column;
+                    &-a{
+                        text-align: center; 
+                        @include textStyle($turquoiseDark, $montserrat, 1.5rem, $bold, 2);
+                        text-transform: uppercase;
+                        &:hover{
+                            color: $black;
+                        }
+                    }
+                }
+                &-extra{
+                    display: flex;
+                    flex-direction: column;
+                    &-a{
+                        text-align: center; 
+                        @include textStyle($turquoiseDark, $montserrat, 1.5rem, $bold, 2);
+                        text-transform: uppercase;
+                        &:hover{
+                            color: $black;
+                        }
+                    } 
+                }
         }
     }
-}
+    .nav_toggle{
+            display: flex !important;
+            flex-direction: column;                
+            margin: 15px;
+    }
+    .nav_toggle span{
+            width: 30px;
+            height: 4px;
+            background: white;
+            margin-bottom: 5px;
+            border-radius: 2px;             
+            transform-origin: 5px 0px;
+            transition: all 0.2s linear;
+    }
+    .close span {
+            transform: rotate(45deg) translate(0px, 0px);
+    }
+    .close span:nth-child(2) {
+            display: none;
+    }
+    .close span:nth-child(3) {
+            transform: rotate(-45deg) translate(-5px, 1px);
+    }
+    .open { 
+        transform: translateX(0) !important
+    }
 }
 
 
-.toggleMenu {
-    width: 3rem;
-    cursor: pointer;
-    display: none;
-}
+// .header {
+//     @media (min-width: 1220px) {
+//     background-image: linear-gradient(to left, $turquoise, $turquoisePastel);
+//     position: fixed;
+//     width: 100%;
+//     height: auto;
+//     padding-inline: 4.5rem;
+//     z-index: 10;
+//     &_nav{
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         &_logo{
+//             display: flex;
+//             align-items: center;
+//             &-img{
+//                 width: 18rem;
+//             }
+//         }
+//         &_div{
+//             display: flex;
+//             align-items: center;
+//             gap: 4rem;
+//             &-a{
+//                 text-decoration: none;
+//                 @include textStyle($white, $montserrat, 1.5rem, $bold, 2);
+//                 text-transform: uppercase;
+//                 &:hover{
+//                     color: $black;
+//                 }
+//             }
+//         }
+//         &_divTwo{
+//             display: flex;
+//             gap: 2rem;
+//             &-a{
+//                 text-decoration: none;
+//                 @include textStyle($white, $montserrat, 1.5rem, $bold, 2);
+//                 text-transform: uppercase;
+//                 &:hover{
+//                     color: $black;
+//                 }
+//             }
+//         }
+//     }
+// }
+// }

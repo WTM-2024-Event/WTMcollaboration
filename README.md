@@ -1,4 +1,4 @@
-# Women's Techmakers Annual Event
+# Women's Techmakers 2024
 
 Bienvenidas al evento anual de Women's Techmakers, una asociación impulsada por un colectivo de mujeres comprometidas con la misión de aumentar la presencia femenina en el sector tecnológico. A través de iniciativas como esta, buscamos fomentar la participación activa de las mujeres en la tecnología y convertirnos en referentes e inspiración para las generaciones más jóvenes.
 
@@ -26,3 +26,5 @@ Podemos utilizar nuestras habilidades, creatividad y pasión para generar un cam
 **Ubicación:** Aún por determinar  
 
 ¡Esperamos verte allí y juntas impactar el futuro! ✨👩‍💻 #WomenInTech #TechmakersEvent
+
+<img src="./src/images/impact-the-future.png" alt="Women's Techmakers Logo" width="300"/>

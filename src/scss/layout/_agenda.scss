@@ -116,7 +116,11 @@
     padding: 2rem;
     width: 70%;
     @media (min-width: 768px) {
-      width: 80%;
+      width: 60%;
+    }
+    @media (min-width: 1024px) {
+      width: 60%;
+      @include dFlex(row, center, flex-start);
     }
   }
 
@@ -124,10 +128,7 @@
     width: 18rem;
     border-radius: 2.5rem;
     margin-bottom: 2.5rem;
-
-    @media (min-width: 768px) {
-      width: 20rem;
-    }
+    box-shadow: 2px 2px 3.5px 0 rgba(0, 0, 0, 0.35);
   }
 
   &__name {
@@ -138,6 +139,16 @@
   &__titleP {
     @include textStyle($green, $montserrat, 1.2rem, bold, 1.5);
     margin-bottom: 2.5rem;
+    @media (min-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .text-column {
+    @media (min-width: 768px) {
+      @include dFlex(column, center, center);
+      margin: auto;
+    }
   }
 
   &__text {
@@ -145,16 +156,19 @@
     margin-bottom: 2.5rem;
     @media (min-width: 768px) {
       margin-inline: 3rem;
+      font-size: 1.5rem;
     }
   }
 
   &__close {
     @include textStyle($white, $montserrat, 1.6rem, regular, 1.5);
-    @include btn (none, 3rem, $green);
+    @include btn(none, 3rem, $green);
     text-decoration: none;
     padding: 0.5rem 2.5rem;
+    cursor: pointer;
   }
 }
+
 
 .hidden {
   display: none;

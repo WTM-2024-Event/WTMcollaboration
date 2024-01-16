@@ -6,7 +6,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 10rem;
+  padding-right: 20rem;
     &_box{
       background-color: rgba(255, 255, 255, 0.884);
       width: 70rem;
@@ -18,7 +18,6 @@
       justify-content: space-evenly;
       &-wtm{
         width: 35rem;
-        padding-bottom: 2rem;
       }
       &-img {
         width: 15rem;
@@ -36,13 +35,13 @@
           margin-top: -10rem;
           box-sizing: border-box;
           &-p{
-            @include textStyle($turquoiseDark, $montserrat, 2rem, $bold, 2);
+            @include textStyle($turquoiseDark, $montserrat, 2rem, $bold, 1.5);
             filter: drop-shadow(1px 1px 2px $bluePastel);
           }
         }
         &-lii{
           &-p{
-            @include textStyle($turquoiseDark, $montserrat, 2rem, $bold, 2);
+            @include textStyle($turquoiseDark, $montserrat, 2rem, $bold, 1.5);
             filter: drop-shadow(1px 1px 2px $bluePastel);
           }
       }
@@ -51,7 +50,7 @@
         margin-top: -10rem;
         box-sizing: border-box;
         &-p{
-          @include textStyle($turquoiseDark, $montserrat, 2rem, $bold, 2);
+          @include textStyle($turquoiseDark, $montserrat, 2rem, $bold, 1.5);
           filter: drop-shadow(1px 1px 2px $bluePastel);
         }
       }

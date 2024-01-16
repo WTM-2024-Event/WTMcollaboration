@@ -1,3 +1,7 @@
+.position {
+  position: relative;
+}
+
 .sectionDiary {
   @include dFlex(column, 0, 0);
   @include padding(0, 4rem);
@@ -62,14 +66,13 @@
   &__act {
     @include dFlex(0, center, center);
     flex-direction: column;
-    background:$background1;
+    background: $background1;
     @include padding(2.5rem, 0.6rem);
     @include textStyle($white, $montserrat, 1.3rem, regular, 1.5rem);
     border-radius: 1.3rem;
     text-align: center;
     flex: 1 1 auto;
 
-    
     @media (min-width: 768px) {
       font-size: 1.6rem;
     }
@@ -87,11 +90,72 @@
     flex: 1 1 auto;
 
     &:hover {
-      background:$turquoisePastel;
+      background: $turquoisePastel;
       color: grey;
     }
     @media (min-width: 768px) {
       font-size: 1.6rem;
     }
   }
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111111ab;
+  @include dFlex(column, center, center);
+
+  &__container {
+    @include dFlex(column, center, center);
+    text-align: center;
+    background-color: $turquoisePastel;
+    border-radius: 2.5rem;
+    padding: 2rem;
+    width: 70%;
+    @media (min-width: 768px) {
+      width: 80%;
+    }
+  }
+
+  &__img {
+    width: 18rem;
+    border-radius: 2.5rem;
+    margin-bottom: 2.5rem;
+
+    @media (min-width: 768px) {
+      width: 20rem;
+    }
+  }
+
+  &__name {
+    @include textStyle($bluePastel, $montserrat, 2rem, bold, 0);
+    margin-bottom: 1.5rem;
+  }
+
+  &__titleP {
+    @include textStyle($green, $montserrat, 1.2rem, bold, 1.5);
+    margin-bottom: 2.5rem;
+  }
+
+  &__text {
+    @include textStyle($white, $montserrat, 1.2rem, regular, 1.5);
+    margin-bottom: 2.5rem;
+    @media (min-width: 768px) {
+      margin-inline: 3rem;
+    }
+  }
+
+  &__close {
+    @include textStyle($white, $montserrat, 1.6rem, regular, 1.5);
+    @include btn (none, 3rem, $green);
+    text-decoration: none;
+    padding: 0.5rem 2.5rem;
+  }
+}
+
+.hidden {
+  display: none;
 }

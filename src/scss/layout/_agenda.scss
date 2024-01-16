@@ -111,7 +111,7 @@
   &__container {
     @include dFlex(column, center, center);
     text-align: center;
-    background-color: $turquoisePastel;
+    background-color: $orangePastel;
     border-radius: 2.5rem;
     padding: 2rem;
     width: 70%;
@@ -126,21 +126,23 @@
 
   &__imgM {
     width: 18rem;
-    border-radius: 2.5rem;
-    margin-bottom: 2.5rem;
-    box-shadow: 2px 2px 3.5px 0 rgba(0, 0, 0, 0.35);
+    margin-bottom: 1.5rem;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   }
 
   &__name {
-    @include textStyle($bluePastel, $montserrat, 2rem, bold, 0);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;              
+    @include textStyle($white, $montserrat, 1.5rem, $bold, 2);
+    text-transform: uppercase;
+    filter: drop-shadow(2px 2px 2px #000000);
   }
 
   &__titleP {
-    @include textStyle($green, $montserrat, 1.2rem, bold, 1.5);
+    @include textStyle(rgb(124, 122, 122), $montserrat, 1.5rem, bold, 1.2);
     margin-bottom: 2.5rem;
     @media (min-width: 768px) {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
+      margin-top: 2rem;
     }
   }
 
@@ -156,16 +158,19 @@
     margin-bottom: 2.5rem;
     @media (min-width: 768px) {
       margin-inline: 3rem;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
     }
   }
 
   &__close {
     @include textStyle($white, $montserrat, 1.6rem, regular, 1.5);
-    @include btn(none, 3rem, $green);
+    @include btn(none, 3rem, $background1);
     text-decoration: none;
     padding: 0.5rem 2.5rem;
     cursor: pointer;
+    &:hover{
+      background-color: $coral;
+    }
   }
 }
 

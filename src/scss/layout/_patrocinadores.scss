@@ -27,21 +27,18 @@
         }
         
     }
-    &_button{
+    &_button {
         @include dFlex(0, center, center);
-        background-color:$blueM;
-        border: currentColor;
-        border-radius: 15px;
-        padding: 10px 15px; 
+        @include btn(none, 3rem, $blueM);
+        padding: 10px 15px;
         margin-inline: auto;
-        margin-block: 5rem; 
-        @include textStyle($white, $montserrat, 2rem, $regular, 1.5rem);
+        margin-block: 15rem;
+        @include textStyle($white, $montserrat, 1.5rem, $regular, 1.5);
         @media (min-width: 768px) {
-            font-size: 2.5rem;
-            padding: 15px 20px;
-          }
-        
-    }
+          font-size: 2rem;
+          padding: 15px 20px;
+        }
+      }
     &_a{
         text-decoration: none;
         :hover{

@@ -5,7 +5,8 @@ const toggleButton = document.querySelector('.nav_toggle');
 const itemsContainer = document.querySelector('.navbar_items');
 
 toggleButton.onclick = () => {
-    itemsContainer.classList.toggle("open");
+    itemsContainer.classList.toggle('open');
 
-    toggleButton.classList.toggle("close");
+    toggleButton.classList.toggle('close');
 };
+

@@ -1,9 +1,16 @@
+img{
+   width: 100%; 
+   height: 100%;
+   object-fit: cover;
+}
+
 .speakers{
     padding-block: 8rem 5rem; 
     background-color: $turquoiseLight;
     margin-top: 5rem;
     &_title{
        text-align: center;
+       text-transform: uppercase;
        @include textStyle($blueM, $montserrat, 2rem, bold, 1.5rem);
        margin-bottom: 5rem;
        @media (min-width: 768px) {
@@ -11,33 +18,77 @@
       }
     }
     &_img{
-        @include dFlex(row, center, center);
-        flex-wrap: wrap;
-        margin: auto;
-        gap: 5rem; 
+        width: 85%;
+        max-width: 1200px;
+        margin-inline: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 133px);
+        grid-auto-rows: 200px;
+        justify-content: center;
+        gap: 2rem; 
         :hover{
             filter: blur(1px);
         }
+        @media (min-width: 270px ) and (max-width: 500px){
+            grid-auto-rows: 283px;
+        }
         &_container{
-            width: 20rem;
-            height: 20rem;
-            background-size: cover;
-            background-repeat: no-repeat;
-            transform: rotate(45deg);
-            overflow: hidden;
-            &-unique{
-                width: 100%;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); 
+            grid-column: span 2;
+            height: 283px;
+            transition: 0.5s filter;
+            :first-of-type{
+                grid-column: 2/ span 2;
+            }
+            @media (min-width: 270px ) and (max-width: 500px){
+                    grid-column: 1/ span 2;
+                }
+            }
+            @media (min-width: 501px ) and (max-width: 700px){
+                :nth-of-type(odd){
+                    grid-column: 2/ span 2;
+                }
+            }
+            
+            @media (min-width: 701px ) and (max-width: 857px){
+                :nth-of-type(3n + 1){
+                    grid-column: 2/ span 2;
+                }
+            }
+            
+            @media (min-width: 858px ) and (max-width: 1033px){
+                :nth-of-type(4n + 1){
+                    grid-column: 2/ span 2;
+                }
+            }
+            @media (min-width: 1034px ) and (max-width: 1208px){
+                :nth-of-type(5n + 1){
+                    grid-column: 2/ span 2;
+                }
+            }
+            
+            @media (min-width: 1209px ) and (max-width: 1383px){
+                :nth-of-type(6n + 1){
+                    grid-column: 2/ span 2;
+                }
+            }
+            
+            @media (min-width: 1384px ) {
+                :nth-of-type(7n + 1){
+                    grid-column: 2/ span 2;
+                }
+            }
+            /*&-unique{
+                width: 100%; 
                 height: 100%;
-                transform: rotate(-45deg);
                 object-fit: cover;
-             }
-           
+             } */
             &-name{
                text-align: center;
                margin-top: 2rem;
             }
     }
-    }
+
     &_button{
         @include dFlex(0, center, center);
         background-color:$blueM;
@@ -45,7 +96,7 @@
         border-radius: 15px;
         padding: 10px 15px; 
         margin-inline: auto;
-        margin-block: 5rem; 
+        margin-block: 15rem; 
         @include textStyle($white, $montserrat, 2rem, $regular, 1.5rem);
         @media (min-width: 768px) {
             font-size: 2.5rem;

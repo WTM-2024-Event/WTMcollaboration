@@ -3,4 +3,36 @@
   background-image: url(../images/madrid1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10rem;
+    &_box{
+      background-color: rgba(255, 255, 255, 0.884);
+      width: 70rem;
+      height: 50rem;
+      border-radius: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      &-img {
+        width: 15rem;
+      }
+      &_ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        list-style-type: none;
+        text-align: center;
+        gap: 5rem;
+        padding-inline: 3rem;
+        &-li{
+          &-p{
+            @include textStyle($turquoiseDark, $montserrat, 2rem, $bold, 2);
+            filter: drop-shadow(1px 1px 2px $bluePastel);
+          }
+        }
+      }
+    }
 }

@@ -119,7 +119,7 @@
             margin-bottom: 0.5rem;
             border-radius: 0.2rem;             
             transform-origin: 0.5rem 0rem;
-            transition: all 0.2s linear;
+            transition: all 0.5s linear;
     }
     .nav_toggle:hover span{
         background: $blue;
@@ -129,13 +129,13 @@
     }
     // Botón que forma X para poder cerrar el menú
     .close span {
-            transform: rotate(45deg) translate(0px, 0px);
+            transform: rotate(405deg) translate(0px, 0px);
     }
     .close span:nth-child(2) {
             display: none;
     }
     .close span:nth-child(3) {
-            transform: rotate(-45deg) translate(-5px, 1px);
+            transform: rotate(-405deg) translate(-5px, 1px);
     }
 
 }

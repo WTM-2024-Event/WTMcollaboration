@@ -102,25 +102,3 @@ function closeModal() {
   localStorage.removeItem('modalShown');
 }
 
-
-function actualizarInfoDelPresentador(ponenteId) {
-  const info = ponentesInfo[ponenteId];
-
-  // Encuentra todos los elementos HTML con la clase común
-  var elementosPresentadores = document.getElementsByClassName('diary__presentationsContainer');
-
-  // Itera sobre los elementos y actualiza su contenido
-  for (let i = 0; i < elementosPresentadores.length; i++) {
-    // Puedes comparar el ID del elemento con el ID del ponente que estás buscando
-    if (elementosPresentadores[i].id === ponenteId) {
-      elementosPresentadores[i].innerHTML = `
-        <p>"${info.info}"</p>
-        <p>-</p>
-        <p>${info.name}</p>
-      `;
-      // No necesitas seguir iterando una vez que encuentras el elemento
-      break;
-    }
-  }
-}
-

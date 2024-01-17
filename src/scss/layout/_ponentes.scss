@@ -62,24 +62,24 @@
       }
     }
 
-    @media (min-width: 701px) and (max-width: 857px) {
+    @media (min-width: 701px) and (max-width: 856px) {
       :nth-of-type(3n + 1) {
         grid-column: 2 / span 2;
       }
     }
 
-    @media (min-width: 858px) and (max-width: 1033px) {
+    @media (min-width: 857px) and (max-width: 1033px) {
       :nth-of-type(4n + 1) {
         grid-column: 2 / span 2;
       }
     }
-    @media (min-width: 1034px) and (max-width: 1208px) {
+    @media (min-width: 1034px) and (max-width: 1209px) {
       :nth-of-type(5n + 1) {
         grid-column: 2 / span 2;
       }
     }
 
-    @media (min-width: 1209px) and (max-width: 1383px) {
+    @media (min-width: 1210px) and (max-width: 1383px) {
       :nth-of-type(6n + 1) {
         grid-column: 2 / span 2;
       }

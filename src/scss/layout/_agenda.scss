@@ -44,7 +44,7 @@
     text-align: center;
     @include dFlex(column, space-between, 0);
     flex: 0 0 auto;
-    background-image: linear-gradient(to left, $blue, $bluePastel);
+    background: $turquoisePastel;
     //border: 0.1rem solid $green;
     border-radius: 1.3rem;
     @include textStyle($white, $montserrat, 1rem, semiregular, 1.5rem);
@@ -81,7 +81,7 @@
   &__presentations {
     @include dFlex(0, center, center);
     flex-direction: column;
-    background: $bluePastel;
+    background-image: linear-gradient(to right, $turquoisePastel, $blue);
     @include padding(2.5rem, 1.6rem);
     @include textStyle($white, $montserrat, 1.3rem, regular, 1.5rem);
     cursor: pointer;
@@ -90,8 +90,7 @@
     flex: 1 1 auto;
 
     &:hover {
-      background: $turquoisePastel;
-      color: grey;
+      box-shadow: 5px 5px 10px rgba(3, 3, 3, 0.452);
     }
     @media (min-width: 768px) {
       font-size: 1.6rem;
@@ -121,7 +120,7 @@
     }
     @media (min-width: 1024px) {
       width: 60%;
-      @include dFlex(row, center, flex-start);
+      @include dFlex(row, center, center);
     }
   }
 

@@ -7,21 +7,22 @@
     box-shadow: 0 0 5px #00000033, 0 1px 0 #ffffff26;
 }
 .navbar{
-    background-image: linear-gradient(to left, $turquoise, $turquoisePastel);
+    background-image: linear-gradient(to bottom, #00cfb4be, #4ec7ffc4);
     width: 100%;
     height: 6rem;
     display: flex;
     justify-content: space-between;
+    padding-left: 3rem;
     &_a{
         cursor: pointer;
         &-logo{
             width: 18rem;
-            filter: drop-shadow(1px 1px 2px #ffffff);
+            filter: drop-shadow(1px 1px 2px #000000);
         }
     }
         &_items{
             display: flex;
-            align-items: center;
+            align-items: center;    
             gap: 10rem;
             &:hover ::before{
                 width: 100% !important;

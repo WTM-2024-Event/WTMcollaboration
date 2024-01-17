@@ -1,5 +1,5 @@
 .sponsors{
-    padding-block: 8rem 5rem; 
+    padding-block: 8rem 2rem ; 
     background-color: $turquoiseLight;
     margin-top: 5rem;
     &_title{
@@ -30,9 +30,9 @@
     &_button {
         @include dFlex(0, center, center);
         @include btn(none, 3rem, $blueM);
-        padding: 10px 15px;
+        padding: 10px 10px;
         margin-inline: auto;
-        margin-block: 15rem;
+        margin-block: 5rem;
         @include textStyle($white, $montserrat, 1.5rem, $regular, 1.5);
         @media (min-width: 768px) {
           font-size: 2rem;

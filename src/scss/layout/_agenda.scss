@@ -1,4 +1,4 @@
-.position {
+.diarySection {
   position: relative;
 }
 
@@ -106,9 +106,9 @@
   bottom: 0;
   background-color: #111111ab;
   @include dFlex(column, center, center);
+  
 
   &__container {
-    @include dFlex(column, center, center);
     text-align: center;
     background-color: $orangePastel;
     border-radius: 2.5rem;
@@ -175,7 +175,6 @@
     }
   }
 }
-
 
 .hidden {
   display: none;

@@ -1,4 +1,4 @@
-<section class="position">
+<section class="diarySection">
   <article class="sectionDiary" id="agenda">
     <h2 class="titleDiary">Agenda</h2>
 
@@ -46,10 +46,10 @@
             <span>00</span>
           </div>
         </div>
-        <div class="diary__presentations">
+        <div class="diary__presentations" onclick="openModal('Ponente 1')" id="ponente1">
           <p>"Lorem, ipsum dolor sit amet consectetur adipisicing elit"
-          <p>- </p>
-          <p> Paula Gonzalez</p>
+          <p>-</p>
+          <p> Cristina Rodríguez</p>
         </div>
       </div>
 
@@ -64,13 +64,14 @@
             <span>30</span>
           </div>
         </div>
-        <div class="diary__presentations js-modal">
+        <div class="diary__presentations" onclick="openModal('Ponente 2')" id="ponente2">
           <p>"Cómo teletrabajar con un buen café. Vete a un coworking"
           <p>- </p>
-          <p> Paula Gonzalez</p>
+          <p>Ainhoa de las Heras</p>
           </p>
         </div>
       </div>
+
       <div class="diary__cel">
         <div class="diary__time">
           <div>
@@ -82,10 +83,10 @@
             <span>35</span>
           </div>
         </div>
-        <div class="diary__presentations">
+        <div class="diary__presentations" onclick="openModal('Ponente 3')" id="ponente3">
           <p>"Cómo teletrabajar con un buen café. Vete a un coworking"
           <p>- </p>
-          <p> Paula Gonzalez</p>
+          <p>Raquel Ortiz</p>
           </p>
         </div>
 
@@ -118,10 +119,10 @@
             <span>10</span>
           </div>
         </div>
-        <div class="diary__presentations">
+        <div class="diary__presentations" onclick="openModal('Ponente 4')" id="ponente4">
           <p>"Cómo teletrabajar con un buen café. Vete a un coworking"
           <p>- </p>
-          <p> Paula Gonzalez</p>
+          <p>Alba Ginés</p>
           </p>
         </div>
 
@@ -137,10 +138,10 @@
             <span>35</span>
           </div>
         </div>
-        <div class="diary__presentations">
+        <div class="diary__presentations" onclick="openModal('Ponente 5')" id="ponente5">
           <p>"Cómo teletrabajar con un buen café. Vete a un coworking"
           <p>- </p>
-          <p> Paula Gonzalez</p>
+          <p>Aranzazu Barrutia</p>
           </p>
         </div>
 
@@ -157,14 +158,14 @@
             <span>35</span>
           </div>
         </div>
-        <div class="diary__presentations">
+        <div class="diary__presentations" onclick="openModal('Ponente 6')" id="ponente6">
           <p>"Cómo teletrabajar con un buen café. Vete a un coworking"
           <p>- </p>
           <p> Paula Gonzalez</p>
           </p>
         </div>
       </div>
-      
+
 
       <div class="diary__cel">
         <div class="diary__time">
@@ -185,23 +186,10 @@
     </div>
   </article>
 
-  <article class="modal hidden js-modalPaula">
-  <div class="modal__container">
-    <div class="modal__column img-column">
-      <img src="./assets/images/istockphoto-1328879352-612x612.jpg" alt="" class="modal__imgM">
-      <h2 class="modal__name">Paula García</h2></div>
-      <div class="modal__column text-column"><h3 class="modal__titleP">"Cómo teletrabajar con un buen café. Vete a un coworking"</h3>
-    
-      <p class="modal__text"> <b>(Madrid, 1991)</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis commodi deleniti cum.</p>
-      <p class="modal__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, dolorem assumenda
-        iure
-        magni dolores ratione quasi reprehenderit impedit aliquam labore, vitae totam qui maxime modi distinctio?
-        Atque
-        vero at nesciunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro tempora, doloremque ratione dignissimos ut, delectus enim error cum reprehenderit perferendis itaque nobis voluptatum. Eaque repellat et fugit quas, illum earum!
-      </p>
-
-    <button src="index.html#agenda" class="modal__close js-close">Volver</button>
-  </div></div>
-</article>
+  <article class="modal hidden" id="myModal">
+    <div class="modal__container" id="modalContent"><button class="modal__close" onclick="closeModal()">Volver</button>
+    </div>
+  </article>
+  
 
 </section>

@@ -143,6 +143,7 @@
     @media (min-width: 768px) {
       font-size: 1.8rem;
       margin-top: 2rem;
+      margin-inline: 3rem
     }
   }
 
@@ -156,6 +157,7 @@
   &__text {
     @include textStyle($white, $montserrat, 1.2rem, regular, 1.5);
     margin-bottom: 2.5rem;
+    text-align: justify;
     @media (min-width: 768px) {
       margin-inline: 3rem;
       font-size: 1.4rem;

@@ -1,0 +1,59 @@
+.hero {
+  height: 100vh;
+  background-image: url(../images/madrid1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20rem;
+    &_box{
+      background-color: rgba(255, 255, 255, 0.884);
+      width: 70rem;
+      height: 50rem;
+      border-radius: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      &-wtm{
+        width: 35rem;
+      }
+      &-img {
+        width: 15rem;
+      }
+      &_ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        list-style-type: none;
+        text-align: center;
+        gap: 5rem;
+        padding-inline: 3rem;
+        &-li{
+          padding-bottom: 10rem;
+          margin-top: -10rem;
+          box-sizing: border-box;
+          &-p{
+            @include textStyle($turquoiseDark, $montserrat, 2rem, $bold, 1.5);
+            filter: drop-shadow(1px 1px 2px $bluePastel);
+          }
+        }
+        &-lii{
+          &-p{
+            @include textStyle($turquoiseDark, $montserrat, 2rem, $bold, 1.5);
+            filter: drop-shadow(1px 1px 2px $bluePastel);
+          }
+      }
+      &-liii{
+        padding-bottom: 10rem;
+        margin-top: -10rem;
+        box-sizing: border-box;
+        &-p{
+          @include textStyle($turquoiseDark, $montserrat, 2rem, $bold, 1.5);
+          filter: drop-shadow(1px 1px 2px $bluePastel);
+        }
+      }
+    } 
+  }
+}

@@ -1,11 +1,23 @@
+.position {
+  position: relative;
+}
+
 .sectionDiary {
-  @include dFlex(column, 0, center);
-  @include padding(0, 10rem);
+  @include dFlex(column, 0, 0);
+  @include padding(0, 4rem);
+
+  @media (min-width: 768px) {
+    margin-inline: 6rem;
+  }
+  @media (min-width: 768px) {
+    margin-inline: 10rem;
+  }
 }
 
 .titleDiary {
+  @include dFlex(column, 0, center);
   @include textStyle($bluePastel, $montserrat, 2rem, bold, 1.5rem);
-  @include margin(0, 2.5rem);
+  @include margin(0, 3.5rem);
   text-transform: uppercase;
 
   @media (min-width: 768px) {
@@ -17,7 +29,7 @@
   @include dFlex(column, center, 0);
   @include margin(2rem, 0);
   @include padding(2rem, 2rem);
-  background-color: rgba(128, 128, 128, 0.116);
+  background-color: $background1;
   border-radius: 1.3rem;
   gap: 1rem;
   flex-wrap: wrap;
@@ -32,8 +44,8 @@
     text-align: center;
     @include dFlex(column, space-between, 0);
     flex: 0 0 auto;
-    background-color: #00dba1b2;
-    border: 0.2rem solid $green;
+    background-image: linear-gradient(to left, $blue, $bluePastel);
+    //border: 0.1rem solid $green;
     border-radius: 1.3rem;
     @include textStyle($white, $montserrat, 1rem, semiregular, 1.5rem);
     @include padding(1rem, 1rem);
@@ -53,8 +65,24 @@
 
   &__act {
     @include dFlex(0, center, center);
-    background-image: linear-gradient(to right bottom,$greenPastel,$bluePastel);
-    @include padding(0.6rem, 0.6rem);
+    flex-direction: column;
+    background: $background1;
+    @include padding(2.5rem, 0.6rem);
+    @include textStyle($white, $montserrat, 1.3rem, regular, 1.5rem);
+    border-radius: 1.3rem;
+    text-align: center;
+    flex: 1 1 auto;
+
+    @media (min-width: 768px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__presentations {
+    @include dFlex(0, center, center);
+    flex-direction: column;
+    background: $bluePastel;
+    @include padding(2.5rem, 1.6rem);
     @include textStyle($white, $montserrat, 1.3rem, regular, 1.5rem);
     cursor: pointer;
     border-radius: 1.3rem;
@@ -62,10 +90,92 @@
     flex: 1 1 auto;
 
     &:hover {
-      background-image: linear-gradient(to right bottom,$bluePastel,$greenPastel);
+      background: $turquoisePastel;
+      color: grey;
     }
     @media (min-width: 768px) {
-      font-size: 1.7rem;
+      font-size: 1.6rem;
     }
   }
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111111ab;
+  @include dFlex(column, center, center);
+
+  &__container {
+    @include dFlex(column, center, center);
+    text-align: center;
+    background-color: $orangePastel;
+    border-radius: 2.5rem;
+    padding: 2rem;
+    width: 70%;
+    box-shadow: 5px 8px 20px rgba(3, 3, 3, 0.452);
+    @media (min-width: 768px) {
+      width: 60%;
+    }
+    @media (min-width: 1024px) {
+      width: 60%;
+      @include dFlex(row, center, flex-start);
+    }
+  }
+
+  &__imgM {
+    width: 18rem;
+    margin-bottom: 1.5rem;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+
+  &__name {
+    margin-bottom: 1.5rem;              
+    @include textStyle($white, $montserrat, 1.5rem, $bold, 2);
+    text-transform: uppercase;
+    filter: drop-shadow(2px 2px 2px #000000);
+  }
+
+  &__titleP {
+    @include textStyle(rgb(124, 122, 122), $montserrat, 1.5rem, bold, 1.2);
+    margin-bottom: 2.5rem;
+    @media (min-width: 768px) {
+      font-size: 1.8rem;
+      margin-top: 2rem;
+    }
+  }
+
+  .text-column {
+    @media (min-width: 768px) {
+      @include dFlex(column, center, center);
+      margin: auto;
+    }
+  }
+
+  &__text {
+    @include textStyle($white, $montserrat, 1.2rem, regular, 1.5);
+    margin-bottom: 2.5rem;
+    @media (min-width: 768px) {
+      margin-inline: 3rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__close {
+    @include textStyle($white, $montserrat, 1.6rem, regular, 1.5);
+    @include btn(none, 3rem, $background1);
+    text-decoration: none;
+    padding: 0.5rem 2.5rem;
+    cursor: pointer;
+    &:hover{
+      background-color: $coral;
+    }
+  }
+}
+
+
+.hidden {
+  display: none;
 }

@@ -89,7 +89,7 @@
     flex-direction: column;
     background-image: linear-gradient(to bottom, #00cfb4be, #379cfa);
     @include padding(2.5rem, 1.6rem);
-    @include textStyle($white, $montserrat, 1.3rem, regular, 1.2);
+    @include textStyle($white, $montserrat, 1.3rem, 500, 1.2);
     cursor: pointer;
     border-radius: 1.3rem;
     text-align: center;

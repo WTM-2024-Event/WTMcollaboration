@@ -1,24 +1,20 @@
 .diarySection {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .sectionDiary {
   @include dFlex(column, 0, 0);
-  @include padding(0, 4rem);
-
-  @media (min-width: 768px) {
-    margin-inline: 6rem;
-  }
-  @media (min-width: 768px) {
-    margin-inline: 10rem;
-  }
+  margin-bottom: 6rem;
 }
 
 .titleDiary {
   @include dFlex(column, 0, center);
-  @include textStyle($bluePastel, $montserrat, 2rem, bold, 1.5rem);
+  @include textStyle(#2480f0, $montserrat, 2rem, bold, 1.5rem);
   @include margin(0, 3.5rem);
   text-transform: uppercase;
+  padding-top: 2rem;
 
   @media (min-width: 768px) {
     font-size: 3.5rem;
@@ -34,6 +30,16 @@
   gap: 1rem;
   flex-wrap: wrap;
 
+  @media (min-width: 768px) {
+    width: 65rem;
+  }
+  @media (min-width: 1024px) {
+    width: 80rem;
+  }
+  @media (min-width: 1440px) {
+    width: 105rem;
+  }
+
   &__cel {
     display: flex;
     gap: 0.5rem;
@@ -44,13 +50,13 @@
     text-align: center;
     @include dFlex(column, space-between, 0);
     flex: 0 0 auto;
-    background: $turquoisePastel;
+    background-image: linear-gradient(to bottom, #00cfb4be, #379cfa);
     //border: 0.1rem solid $green;
     border-radius: 1.3rem;
-    @include textStyle($white, $montserrat, 1rem, semiregular, 1.5rem);
+    @include textStyle($white, $montserrat, 1rem, semiregular, 1.2);
     @include padding(1rem, 1rem);
     &--ent {
-      @include textStyle($white, $montserrat, 1.3rem, bold, 1.5rem);
+      @include textStyle($white, $montserrat, 1.3rem, bold, 1.2);
 
       @media (min-width: 768px) {
         font-size: 2rem;
@@ -68,7 +74,7 @@
     flex-direction: column;
     background: $background1;
     @include padding(2.5rem, 0.6rem);
-    @include textStyle($white, $montserrat, 1.3rem, regular, 1.5rem);
+    @include textStyle(grey, $montserrat, 1.3rem, regular, 1.5);
     border-radius: 1.3rem;
     text-align: center;
     flex: 1 1 auto;
@@ -81,9 +87,9 @@
   &__presentations {
     @include dFlex(0, center, center);
     flex-direction: column;
-    background-image: linear-gradient(to right, $turquoisePastel, $blue);
+    background-image: linear-gradient(to bottom, #00cfb4be, #379cfa);
     @include padding(2.5rem, 1.6rem);
-    @include textStyle($white, $montserrat, 1.3rem, regular, 1.5rem);
+    @include textStyle($white, $montserrat, 1.3rem, regular, 1.2);
     cursor: pointer;
     border-radius: 1.3rem;
     text-align: center;
@@ -106,7 +112,7 @@
   bottom: 0;
   background-color: #111111ab;
   @include dFlex(column, center, center);
-  
+
 
   &__container {
     text-align: center;
@@ -131,7 +137,7 @@
   }
 
   &__name {
-    margin-bottom: 1.5rem;              
+    margin-bottom: 1.5rem;
     @include textStyle($white, $montserrat, 1.5rem, $bold, 2);
     text-transform: uppercase;
     filter: drop-shadow(2px 2px 2px #000000);

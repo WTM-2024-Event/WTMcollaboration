@@ -17,6 +17,7 @@
         cursor: pointer;
         &-logo{
             width: 18rem;
+            filter: drop-shadow(2px 2px 3px #000000);
         }
     }
         &_items{
@@ -68,6 +69,7 @@
     .navbar{
         display: flex;
         justify-content: space-between;
+        padding-left: 0;
         &_items{
             position: absolute;
             top: 6rem;

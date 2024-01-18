@@ -1,25 +1,39 @@
 .footer {
   background-image: linear-gradient(to left, $turquoise, $turquoisePastel);
   padding: 20px;
-
   width: 100%;
   height: auto;
+  text-align: center;
+  &_section_content {
+    display: flex;
+    flex-direction: column;
+    /*align-items: center; */
+  }
   &_section_rrss {
     display: flex;
     justify-content: center;
     align-items: center;
-   
-    margin: 5px 0;
   }
   &_section_rrss a {
-   
     color: $white;
-    width: 5rem;
+    margin: 5px 15px;
+    transition: color 0.3s, transform 0.3s;
+
+}
+  &_section_rrss a:hover {
+    color: $blue;
+    transform: rotate(360deg);
+    /*transform: translateY(-5px);*/
+
+}
+  &_section_rrss i {
+    font-size: 2rem;
   }
   &_section_links {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-left: 20px;
   }
   &_section_links a {
     margin-top: 15px;
@@ -29,17 +43,15 @@
     text-transform: uppercase;
   }
 
-  &_section {
- 
-    &_logo {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      &-img {
-        width: 15rem;
-      }
+  &_section_logo {
+    display: flex;
+    justify-content: flex-end;
+
+    &-img {
+      width: 15rem;
     }
   }
+
   &_section_copy {
     display: flex;
     color: $black;
@@ -48,3 +60,5 @@
     margin-top: 1rem;
   }
 }
+
+/*display: flex;*/

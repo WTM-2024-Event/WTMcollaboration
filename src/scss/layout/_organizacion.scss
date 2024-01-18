@@ -1,16 +1,114 @@
-.container {
-  padding-block: 8rem 5rem;
-  margin-top: 5rem;
-  &_div {
-    position: relative;
-    &_figure {
-      position: relative;
-      &_img {
-        @include dFlex(0, center, center);
-        flex-wrap: wrap;
-        margin: auto;
-        gap: 3rem;
-      }
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100%;
+
+  background: #dfdfc3;
+  overflow: hidden;
+}
+
+body .container .marga,
+body .border .marga {
+  width: 100px;
+  height: 100px;
+  /* background: #292929; */
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+body .container .border .marga,
+body .border .border .marga {
+  width: 80%;
+  height: 80%;
+  background-image: url('imagenes/hamilyon100-1.jpg');
+  /* overflow: hidden; */
+  transform: translate(-50%, -50%);
+
+  -webkit-clip-path: polygon(
+    0% 50%,
+    25% 95%,
+    75% 95%,
+    100% 50%,
+    75% 5%,
+    25% 5%
+  );
+  clip-path: polygon(0% 50%, 25% 95%, 75% 95%, 100% 50%, 75% 5%, 25% 5%);
+  -webkit-clip-path: polygon(
+    50% 0%,
+    95% 25%,
+    95% 75%,
+    50% 100%,
+    5% 75%,
+    5% 25%
+  );
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}
+body .container .ada,
+body .border .ada {
+  width: 100px;
+  height: 100px;
+
+  position: absolute;
+  top: 50px;
+  left: 50px;
+
+  transform: translate(-50%, -50%);
+  -webkit-clip-path: polygon(
+    0% 50%,
+    25% 95%,
+    75% 95%,
+    100% 50%,
+    75% 5%,
+    25% 5%
+  );
+  clip-path: polygon(0% 50%, 25% 95%, 75% 95%, 100% 50%, 75% 5%, 25% 5%);
+  -webkit-clip-path: polygon(
+    50% 0%,
+    95% 25%,
+    95% 75%,
+    50% 100%,
+    5% 75%,
+    5% 25%
+  );
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}
+body .container .border .ada,
+body .border .border .ada {
+  width: 90%;
+  height: 90%;
+  background-image: url('imagenes/ada100.jpg');
+  background-size: contain;
+}
+
+/* body .container .border .content,
+body .border .border .content {
+  width: 150%;
+  height: 100%;
+  background: #dfdfc3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-animation: contentAnimation 2s infinite linear;
+  animation: contentAnimation 2s infinite linear;
+  transform-origin: center top;
+} */
+@-webkit-keyframes contentAnimation {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(-360deg);
+  }
+}
+@keyframes contentAnimation {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(-360deg);
   }
 }

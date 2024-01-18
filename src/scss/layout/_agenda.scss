@@ -141,7 +141,7 @@
 
   &__name {
     margin-bottom: 1.5rem;
-    @include textStyle($white, $montserrat, 1.5rem, $bold, 2);
+    @include textStyle($white, $montserrat, 1.5rem, $bold, 1.5);
     text-transform: uppercase;
     filter: drop-shadow(2px 2px 2px $black);
   }

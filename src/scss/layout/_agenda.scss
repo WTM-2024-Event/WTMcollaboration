@@ -50,7 +50,10 @@
     text-align: center;
     @include dFlex(column, space-between, 0);
     flex: 0 0 auto;
-    background-image: linear-gradient(to bottom, #00cfb4be, #379cfa);
+    background-image: linear-gradient(140deg, $blue 0%, #00cfb4be 100%);
+
+
+    //background-image: linear-gradient(to bottom, #00cfb4be, $blue);
     //border: 0.1rem solid $green;
     border-radius: 1.3rem;
     @include textStyle($white, $montserrat, 1rem, semiregular, 1.2);
@@ -74,7 +77,7 @@
     flex-direction: column;
     background: $background1;
     @include padding(2.5rem, 0.6rem);
-    @include textStyle(grey, $montserrat, 1.3rem, regular, 1.5);
+    @include textStyle($grey, $montserrat, 1.3rem, regular, 1.5);
     border-radius: 1.3rem;
     text-align: center;
     flex: 1 1 auto;
@@ -87,16 +90,16 @@
   &__presentations {
     @include dFlex(0, center, center);
     flex-direction: column;
-    background-image: linear-gradient(to bottom, #00cfb4be, #379cfa);
+    background-image: linear-gradient(10deg, #00cfb4be 0%, $blue 100%);
     @include padding(2.5rem, 1.6rem);
-    @include textStyle($white, $montserrat, 1.3rem, 500, 1.2);
+    @include textStyle($white, $montserrat, 1.3rem, 500, 1);
     cursor: pointer;
     border-radius: 1.3rem;
     text-align: center;
     flex: 1 1 auto;
 
     &:hover {
-      box-shadow: 5px 5px 10px rgba(3, 3, 3, 0.452);
+      box-shadow: 5px 5px 10px $blackTransparent;
     }
     @media (min-width: 768px) {
       font-size: 1.6rem;
@@ -110,7 +113,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #111111ab;
+  background-color: $blackTransparent;
   @include dFlex(column, center, center);
 
 
@@ -120,12 +123,12 @@
     border-radius: 2.5rem;
     padding: 2rem;
     width: 70%;
-    box-shadow: 5px 8px 20px rgba(3, 3, 3, 0.452);
+    box-shadow: 5px 8px 20px $blackTransparent;
     @media (min-width: 768px) {
-      width: 60%;
+      width: 60rem;
     }
     @media (min-width: 1024px) {
-      width: 60%;
+      width: 70rem;
       @include dFlex(row, center, center);
     }
   }
@@ -140,11 +143,11 @@
     margin-bottom: 1.5rem;
     @include textStyle($white, $montserrat, 1.5rem, $bold, 2);
     text-transform: uppercase;
-    filter: drop-shadow(2px 2px 2px #000000);
+    filter: drop-shadow(2px 2px 2px $black);
   }
 
   &__titleP {
-    @include textStyle(rgb(124, 122, 122), $montserrat, 1.5rem, bold, 1.2);
+    @include textStyle($grey, $montserrat, 1.5rem, bold, 1.2);
     margin-bottom: 2.5rem;
     @media (min-width: 768px) {
       font-size: 1.8rem;

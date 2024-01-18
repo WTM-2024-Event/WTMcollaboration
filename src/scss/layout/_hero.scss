@@ -3,110 +3,91 @@
   background-image: url(../images/madrid1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  padding-right: 0;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  padding-right: 20rem;
+  @media (min-width: 1500px){
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20rem;
+  }
     &_box{
       background-color: rgba(255, 255, 255, 0.884);
-      width: 70rem;
-      height: 50rem;
+      width: 80%;
+      height: 80%;
       border-radius: 3rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      &-wtm{
-        width: 35rem;
-      }
-      &-img {
-        width: 15rem;
-      }
-      &_ul{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        list-style-type: none;
-        text-align: center;
-        gap: 5rem;
-        padding-inline: 3rem;
-        &-li{
-          padding-bottom: 10rem;
-          margin-top: -10rem;
-          box-sizing: border-box;
-          &-p{
-            @include textStyle($turquoiseDark, $montserrat, 2rem, $bold, 1.5);
-            filter: drop-shadow(1px 1px 2px $bluePastel);
-          }
-        }
-        &-lii{
-          &-p{
-            @include textStyle($turquoiseDark, $montserrat, 2rem, $bold, 1.5);
-            filter: drop-shadow(1px 1px 2px $bluePastel);
-          }
-      }
-      &-liii{
-        padding-bottom: 10rem;
-        margin-top: -10rem;
-        box-sizing: border-box;
-        &-p{
-          @include textStyle($turquoiseDark, $montserrat, 2rem, $bold, 1.5);
-          filter: drop-shadow(1px 1px 2px $bluePastel);
-        }
-      }
-    } 
-  }
-}
-
-@media (max-width: 900px){
-    .hero{
-      padding-right: 0;
       display: flex;
       justify-content: center;
       align-items: center;
-      &_box{
-        width: 80%;
-        height: 60%;
+      flex-direction: column;
+      @media (min-width: 900px){
+        justify-content: space-evenly;
+        width: 70rem;
+        height: 50rem;  
+      }
+      &-wtm{
+        width: 10rem;
+        @media (min-width: 900px){width: 35rem;}
+      }
+      &-img {
+        width: 5rem;
+        @media (min-width: 900px){width: 15rem;}
+      }
+      &_ul{
+        list-style-type: none;
         display: flex;
-        &-wtm{
-          width: 10rem;
-        }
-        &-img {
-          width: 5rem;
-        }
-        &_ul{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        @media (min-width: 900px){
+          display: flex;
+          flex-direction: row;
+          align-items: center;
           list-style-type: none;
-          &-li{
-            &-img{
-              width: 10rem;
-            }
-            &-p{
-              @include textStyle($turquoiseDark, $montserrat, 1rem, $bold, 1);
-              filter: drop-shadow(1px 1px 2px $bluePastel);
-            }
-          }
-          &-lii{
-            &-img{
-              width: 10rem;
-            }
-            &-p{
-              @include textStyle($turquoiseDark, $montserrat, 1rem, $bold, 1);
-              filter: drop-shadow(1px 1px 2px $bluePastel);
-            }
+          text-align: center;
+          gap: 5rem;
+          padding-inline: 3rem;
         }
-        &-liii{
+        &-li{
+          @media (min-width: 900px){
+            padding-bottom: 10rem;
+            margin-top: -10rem;
+            box-sizing: border-box;
+          }
           &-img{
-            width: 10rem;
+            width: 6rem;
           }
           &-p{
             @include textStyle($turquoiseDark, $montserrat, 1rem, $bold, 1);
             filter: drop-shadow(1px 1px 2px $bluePastel);
           }
         }
+        &-lii{
+          &-img{
+            width: 6rem;
+          }
+          &-p{
+            @include textStyle($turquoiseDark, $montserrat, 1rem, $bold, 1);
+            filter: drop-shadow(1px 1px 2px $bluePastel);
+          }
       }
+      &-liii{
+        @media (min-width: 900px){
+          padding-bottom: 10rem;
+          margin-top: -10rem;
+          box-sizing: border-box;
+        }
+        &-img{
+          width: 6rem;
+        }
+        &-p{
+          @include textStyle($turquoiseDark, $montserrat, 1rem, $bold, 1);
+          filter: drop-shadow(1px 1px 2px $bluePastel);
+        }
       }
-
+    } 
+  }
 }
-}
-
-// 0.79

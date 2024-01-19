@@ -22,7 +22,7 @@ var ponentesInfo = {
     image: './assets/images/cris.png',
     title: 'Cómo teletrabajar en un networking',
     place: '(Madrid, 1991)',
-    bio: 'Breve biografía del Ponente 1. Puedes agregar más detalles aquí.',
+    bio: 'Breve biografía del Ponente 1.',
     info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
   },
   'Ponente 2': {
@@ -30,7 +30,7 @@ var ponentesInfo = {
     image: './assets/images/ainhoa.jpg',
     title: 'Cómo teletrabajar en un networking',
     place: '(Barcelona, 1991)',
-    bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, dolorem assumendaiure',
+    bio: 'Breve biografía del Ponente 2.',
     info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus',
   },
   'Ponente 3': {
@@ -38,7 +38,7 @@ var ponentesInfo = {
     image: './assets/images/Rachel.jpg',
     title: 'Cómo teletrabajar en un networking',
     place: '(Barcelona, 1991)',
-    bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, dolorem assumendaiure',
+    bio: 'Breve biografía del Ponente 3.',
     info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus',
   },
   'Ponente 4': {
@@ -46,7 +46,7 @@ var ponentesInfo = {
     image: './assets/images/istockphoto-1328879352-612x612.jpg',
     title: 'Cómo teletrabajar en un networking',
     place: '(Barcelona, 1991)',
-    bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, dolorem assumendaiure',
+    bio: 'Breve biografía del Ponente 4.',
     info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus',
   },
   'Ponente 5': {
@@ -54,7 +54,7 @@ var ponentesInfo = {
     image: './assets/images/istockphoto-1328879352-612x612.jpg',
     title: 'Cómo teletrabajar en un networking',
     place: '(Barcelona, 1991)',
-    bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, dolorem assumendaiure',
+    bio: 'Breve biografía del Ponente 5.',
     info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus',
   },
   'Ponente 6': {
@@ -62,7 +62,7 @@ var ponentesInfo = {
     image: './assets/images/istockphoto-1328879352-612x612.jpg',
     title: 'Cómo teletrabajar en un networking',
     place: '(Barcelona, 1991)',
-    bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, dolorem assumendaiure',
+    bio: 'Breve biografía del Ponente 6.',
     info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus',
   },
 };

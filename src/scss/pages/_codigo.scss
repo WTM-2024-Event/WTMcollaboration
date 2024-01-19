@@ -21,6 +21,9 @@
       font-size: 2.5rem;
       padding: 3rem 10rem;
     }
+    @media (min-width: 1024px) {
+      padding: 3rem 15rem;
+    }
   }
 
   &__textTitleC {
@@ -32,6 +35,9 @@
       font-size: 1.5rem;
       padding: 2rem 10rem;
     }
+    @media (min-width: 1024px) {
+        padding: 3rem 15rem;
+      }
   }
 }
 

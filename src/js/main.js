@@ -16,7 +16,7 @@ toggleButton.onclick = () => {
 
 // Objeto que almacena la información de los ponentes
 
-var ponentesInfo = {
+const ponentesInfo = {
   'Ponente 1': {
     name: 'Cristina rodríguez',
     image: './assets/images/cris.png',

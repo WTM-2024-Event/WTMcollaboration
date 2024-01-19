@@ -39,6 +39,7 @@
   @include dFlex(column, center, center);
   &__hugImg {
     width: 15rem;
+    padding-bottom: 1.5rem;
   }
 
   &__creditC {
@@ -54,6 +55,6 @@
 }
 
 a {
-  color: $black;
+  color: $turquoise;
   text-decoration: none;
 }

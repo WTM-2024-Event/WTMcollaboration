@@ -12,11 +12,12 @@
     height: 6rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-left: 3rem;
     &_a{
         cursor: pointer;
         &-logo{
-            width: 18rem;
+            width: 15rem;
             filter: drop-shadow(2px 2px 3px #000000);
         }
     }

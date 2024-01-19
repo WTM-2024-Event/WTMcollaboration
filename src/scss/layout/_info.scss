@@ -7,7 +7,7 @@
   &_title {
     text-align: center;
     text-transform: uppercase;
-    @include textStyle($blue, $montserrat, 2rem, bold, 1.5rem);
+    @include textStyle($blue, $montserrat, 2rem, bold, 1.5);
     margin-bottom: 3rem;
     @media (min-width: 768px) {
       font-size: 3.5rem;

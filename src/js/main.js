@@ -79,7 +79,9 @@ function openModal(ponente) {
 
     modalContent.innerHTML = `
       <div class="modal__column img-column">
+      <div class="shadow">
         <img src="${info.image}" alt="${info.name}" class="modal__imgM">
+      </div> 
         <h2 class="modal__name">${info.name}</h2>
       </div>
       <div class="modal__column text-column">

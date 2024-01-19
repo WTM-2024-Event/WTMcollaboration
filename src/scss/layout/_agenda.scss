@@ -118,8 +118,9 @@
 
 
   &__container {
+    filter: drop-shadow(0 0 7rem #4fd5b0);
     text-align: center;
-    background-color: $orangePastel;
+    background-color: $white;
     border-radius: 2.5rem;
     padding: 2rem;
     width: 70%;
@@ -141,13 +142,13 @@
 
   &__name {
     margin-bottom: 1.5rem;
-    @include textStyle($white, $montserrat, 1.5rem, $bold, 1.5);
+    @include textStyle($blue, $montserrat, 1.5rem, $bold, 1.5);
     text-transform: uppercase;
-    filter: drop-shadow(2px 2px 2px $black);
+    filter: drop-shadow(0 0 2px #4fd5b0);
   }
 
   &__titleP {
-    @include textStyle($grey, $montserrat, 1.5rem, bold, 1.2);
+    @include textStyle($blue500, $montserrat, 1.5rem, bold, 1.2);
     margin-bottom: 2.5rem;
     @media (min-width: 768px) {
       font-size: 1.8rem;
@@ -164,7 +165,7 @@
   }
 
   &__text {
-    @include textStyle($white, $montserrat, 1.2rem, regular, 1.5);
+    @include textStyle($black, $montserrat, 1.2rem, regular, 1.5);
     margin-bottom: 2.5rem;
     text-align: justify;
     @media (min-width: 768px) {
@@ -174,15 +175,19 @@
   }
 
   &__close {
-    @include textStyle($white, $montserrat, 1.6rem, regular, 1.5);
-    @include btn(none, 3rem, $background1);
+    @include textStyle($grey, $montserrat, 1.6rem, regular, 1.5);
+    @include btn(none, 3rem, $blue100);
     text-decoration: none;
     padding: 0.5rem 2.5rem;
     cursor: pointer;
     &:hover{
-      background-color: $coral;
+      background-color: $blue;
+      color: $black;
     }
   }
+}
+.shadow{
+  filter: drop-shadow(0 0 10px $turquoiseDark);
 }
 
 .hidden {

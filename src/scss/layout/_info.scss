@@ -1,13 +1,65 @@
 .info {
   padding-block: 8rem 5rem;
   background-color: $turquoiseLight;
+  display: flex;
+  flex-direction: column;
+
   &_title {
     text-align: center;
     text-transform: uppercase;
-    @include textStyle($blueM, $montserrat, 2rem, bold, 1.5rem);
-    margin-bottom: 5rem;
+    @include textStyle($blue, $montserrat, 2rem, bold, 1.5rem);
+    margin-bottom: 3rem;
     @media (min-width: 768px) {
       font-size: 3.5rem;
+    }
+    &-h3 {
+      color: $blue;
+      font-family: $montserrat;
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 8px;
+      @media (min-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+  }
+  &_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      margin: 3rem 5rem;
+  
+    }
+    @media (min-width: 1024px) {
+    
+      margin: 4rem 10rem;
+      gap: 2.5rem;
+    }
+    @media (min-width: 1440px) {
+     
+      margin: 4rem 32rem;
+ 
+    }
+    &-p {
+      font-size: 1.4rem;
+      font-family: $montserrat;
+      margin: 2rem 5rem;
+      text-align: center;
+      
+      
+    }
+    &-img {
+      width: 25rem;
+      border-radius: 15%;
+      text-align: center;
+      margin-top: 20px;
+      @media (min-width: 768px) {
+        margin-right: 2.5rem;
+      }
+      
     }
   }
 }

@@ -1,0 +1,10 @@
+.sectionCode {
+  height: 100vh;
+  background-color: $blue50;
+  &__titleC {
+    @include dFlex(column, center, center);
+    @include textStyle(#2480f0, $montserrat, 2rem, bold, 1.5rem);
+    text-transform: uppercase;
+    padding-top: 10rem;
+  }
+}

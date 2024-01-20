@@ -4,7 +4,7 @@
     margin-top: 5rem;
     &_title{
        text-align: center;
-       @include textStyle($blueM, $montserrat, 2rem, bold, 1.5rem);
+       @include textStyle($blue, $montserrat, 2rem, bold, 1.5rem);
        margin-bottom: 5rem;
        @media (min-width: 768px) {
         font-size: 3.5rem;
@@ -13,7 +13,7 @@
     &_img{
         @include dFlex(0, center, center);
         flex-wrap: wrap;
-        margin: auto; 
+        margin-inline: 15rem; 
         gap: 3rem; 
         &_unique{
             width: 25rem;
@@ -29,7 +29,7 @@
     }
     &_button {
         @include dFlex(0, center, center);
-        @include btn(none, 3rem, $blueM);
+        @include btn(none, 3rem, $blue);
         padding: 10px 10px;
         margin-inline: auto;
         margin-block: 5rem;

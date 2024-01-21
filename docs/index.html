@@ -1,68 +1,446 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Adalab Web Starter Kit</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="icon" href="./assets/images/favicon.png" />
-  </head>
 
-  <body>
-    <div class="page">
-      <header class="page__header">
-        <img src="./assets/images/logo-adalab.png" alt="Adalab">
-        <h1>Bienvenidos a Adalab</h1>
-      </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WTM Madrid</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="icon" href="./assets/images/favicon1.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700;900&family=Montserrat:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/d65782632e.js" crossorigin="anonymous"></script>
+</head>
 
-      <main class="page__main">
-        <h2>Este es el starter kit de Adalab</h2>
-        <p>Lo usamos para aprender:</p>
-        <ul class="main__list">
-          <li>Sass</li>
-          <li>HTML partials</li>
-          <li>Gulp</li>
-          <li>y muchas cosas más</li>
-        </ul>
-        <p>Si quieres saber cúales son las rutas correctas para:</p>
-        <ul class="main__list">
-          <li>
-            una <code class="code">&lt;img /&gt;</code> mira el fichero
-            <code class="code">./src/html/partials/header.html</code>.
-          </li>
-          <li>
-            y para un <code class="code">background-image</code> mira el fichero
-            <code class="code">./src/html/scss/layout/_page.scss</code>.
-          </li>
-        </ul>
-        <p>
-          Si quieres saber cómo usar un partial HTML dentro de otro partial, busca en la carperta
-          <code class="code">./src/html/index.html</code> y
-          <code class="code">./src/html/partials/main.html</code>, y verás cómo estamos creando estos
-          enlaces:
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <a href="index.html#hero" class="navbar_a">
+        <img class="navbar_a-logo" src="./assets/images/logo-wtm-white.png" alt="Logo Women TechMakers">
+      </a>
+      <div class="navbar_items">
+        <div class="navbar_items-menu">
+          <a class="navbar_items-menu-a" href="index.html#info">Información</a>
+          <a class="navbar_items-menu-a" href="index.html#agenda">Agenda</a>
+          <a class="navbar_items-menu-a" href="index.html#ponentes">Ponentes</a>
+          <a class="navbar_items-menu-a" href="index.html#organizacion">Organización</a>
+          <a class="navbar_items-menu-a" href="index.html#patrocinadores">Patrocinadores</a>
+        </div>
+        <div class="navbar_items-extra">
+          <a class="navbar_items-extra-a" href="#">Entradas</a>
+          <a class="navbar_items-extra-a" href="#">Contacto</a>
+        </div>
+      </div>
+      <div class="nav_toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+  </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+        <div class="hero_box">
+            <img class="hero_box-img" src="./assets/images/wtm-impact.png" alt=" Imagen Impact the future">
+            <ul class="hero_box_ul">
+                <li class="hero_box_ul-li">
+                    <img class="hero_box_ul-li-img" src="./assets/images/calendario.png" alt="Icono calendario">
+                    <p class="hero_box_ul-li-p">8 de Marzo de 2024</p>
+                </li>
+                <li class="hero_box_ul-lii">
+                    <img class="hero_box_ul-lii-img" src="./assets/images/mapa.png" alt="Icono mapa">
+                    <p class="hero_box_ul-lii-p">Calle Desengaño, 21 </p>
+                </li>
+                <li class="hero_box_ul-liii">
+                    <img class="hero_box_ul-liii-img" src="./assets/images/ticket2.png" alt="Icono ticket">
+                    <p class="hero_box_ul-liii-p">Entradas Disponibles</p>
+                </li>
+            </ul>
+        </div>
+    </section>  
+    <section class="info" id="info">
+      <h2 class="info_title">información</h2>
+      <h3 class="info_title-h3">Women Techmakers Madrid</h3>
+      <section class="info_section">
+        <p class="info_section-p">
+          El 23 de Abril tienes una cita en nuestra quinta edición del evento
+          <strong>Women Techmakers Madrid</strong>
+          . Women Techmakers es una iniciativa liderada por Google, que se está
+          expandiendo a un programa a nivel mundial.
+          <strong>Con motivo del Día Internacional de la Mujer</strong>
+          , se promueven diferentes eventos alrededor del mundo con el objetivo de
+          dar a conocer el trabajo y el conocimiento de las mujeres en el sector
+          técnico. En Madrid
+          <strong>queremos juntar a las mejores ponentes</strong>
+          para que puedan compartir con todos nosotros su conocimiento. Y recordad
+          que
+          <strong>los chicos también están invitados</strong>
+          a asistir al evento.
         </p>
-        <ul class="main__list">
-          <li>
-            <a class="link__adalab" href="https://adalab.es">Adalab</a>
+        <img
+          class="info_section-img"
+          src="./assets/images/pepinas.jpg"
+          alt="foto pepinas"
+        />
+      </section>
+    </section>
 
-          </li>
-          <li>
-            <a class="" href="./more-info.html">Más info del starter kit</a>
+    <!-- <div class="container__asterisk"><img src="./assets/images/asterisk.png" class="container__asterisk" alt="icono asterisco"></div> -->
+    <section class="diarySection">
+      <article class="sectionDiary" id="agenda">
+        <h2 class="titleDiary">Agenda</h2>
 
-          </li>
-        </ul>
-      </main>
+        <div class="diary">
+          <div class="diary__cel">
+            <div class="diary__time">
+              <div>
+                <span class="diary__time--ent">8</span>
+                <span>30</span>
+              </div>
+              <div>
+                <span class="diary__time--ent">9</span>
+                <span>55</span>
+              </div>
+            </div>
+            <div class="diary__act">
+              <p>Registro</p>
+            </div>
+          </div>
 
-      <footer class="page__footer">
-        <small>
-          &copy; Todos los derechos reservados
-          <a class="link__adalab" href="https://adalab.es">Adalab</a>
+          <div class="diary__cel">
+            <div class="diary__time">
+              <div>
+                <span class="diary__time--ent">10</span>
+                <span>00</span>
+              </div>
+              <div>
+                <span class="diary__time--ent">10</span>
+                <span>25</span>
+              </div>
+            </div>
+            <div class="diary__act">
+              <p>Acto de bienvenida</p>
+            </div>
+          </div>
 
-        </small>
-      </footer>
+          <div class="diary__cel">
+            <div class="diary__time">
+              <div>
+                <span class="diary__time--ent">10</span>
+                <span>25</span>
+              </div>
+              <div>
+                <span class="diary__time--ent">11</span>
+                <span>00</span>
+              </div>
+            </div>
+            <div class="diary__presentations" onclick="openModal('Ponente 1')" id="ponente1">
+              <p>"Lorem, ipsum dolor sit amet consectetur adipisicing elit"
+              <p>-</p>
+              <p> Cristina Rodríguez</p>
+            </div>
+          </div>
 
+          <div class="diary__cel">
+            <div class="diary__time">
+              <div>
+                <span class="diary__time--ent">11</span>
+                <span>10</span>
+              </div>
+              <div>
+                <span class="diary__time--ent">11</span>
+                <span>30</span>
+              </div>
+            </div>
+            <div class="diary__presentations" onclick="openModal('Ponente 2')" id="ponente2">
+              <p>"Cómo teletrabajar con un buen café. Vete a un coworking"
+              <p>- </p>
+              <p>Ainhoa de las Heras</p>
+              </p>
+            </div>
+          </div>
+
+          <div class="diary__cel">
+            <div class="diary__time">
+              <div>
+                <span class="diary__time--ent">13</span>
+                <span>10</span>
+              </div>
+              <div>
+                <span class="diary__time--ent">13</span>
+                <span>35</span>
+              </div>
+            </div>
+            <div class="diary__presentations" onclick="openModal('Ponente 3')" id="ponente3">
+              <p>"Cómo teletrabajar con un buen café. Vete a un coworking"
+              <p>- </p>
+              <p>Raquel Ortiz</p>
+              </p>
+            </div>
+
+          </div>
+
+          <div class="diary__cel">
+            <div class="diary__time">
+              <div>
+                <span class="diary__time--ent">11</span>
+                <span>30</span>
+              </div>
+              <div>
+                <span class="diary__time--ent">12</span>
+                <span>15</span>
+              </div>
+            </div>
+            <div class="diary__act">
+              <p>Pausa</p>
+            </div>
+          </div>
+
+          <div class="diary__cel">
+            <div class="diary__time">
+              <div>
+                <span class="diary__time--ent">12</span>
+                <span>25</span>
+              </div>
+              <div>
+                <span class="diary__time--ent">13</span>
+                <span>10</span>
+              </div>
+            </div>
+            <div class="diary__presentations" onclick="openModal('Ponente 4')" id="ponente4">
+              <p>"Cómo teletrabajar con un buen café. Vete a un coworking"
+              <p>- </p>
+              <p>Alba Ginés</p>
+              </p>
+            </div>
+
+          </div>
+          <div class="diary__cel">
+            <div class="diary__time">
+              <div>
+                <span class="diary__time--ent">13</span>
+                <span>10</span>
+              </div>
+              <div>
+                <span class="diary__time--ent">13</span>
+                <span>35</span>
+              </div>
+            </div>
+            <div class="diary__presentations" onclick="openModal('Ponente 5')" id="ponente5">
+              <p>"Cómo teletrabajar con un buen café. Vete a un coworking"
+              <p>- </p>
+              <p>Aranzazu Barrutia</p>
+              </p>
+            </div>
+
+          </div>
+
+          <div class="diary__cel">
+            <div class="diary__time">
+              <div>
+                <span class="diary__time--ent">13</span>
+                <span>10</span>
+              </div>
+              <div>
+                <span class="diary__time--ent">13</span>
+                <span>35</span>
+              </div>
+            </div>
+            <div class="diary__presentations" onclick="openModal('Ponente 6')" id="ponente6">
+              <p>"Cómo teletrabajar con un buen café. Vete a un coworking"
+              <p>- </p>
+              <p> Paula Gonzalez</p>
+              </p>
+            </div>
+          </div>
+
+
+          <div class="diary__cel">
+            <div class="diary__time">
+              <div>
+                <span class="diary__time--ent">13</span>
+                <span>45</span>
+              </div>
+              <div>
+                <span class="diary__time--ent">15</span>
+                <span>00</span>
+              </div>
+            </div>
+            <div class="diary__act">
+              <p>Networking</p>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <article class="modal hidden" id="myModal">
+        <div class="modal__container" id="modalContent"><button class="modal__close" onclick="closeModal()">Volver</button>
+        </div>
+      </article>
+      
+
+    </section>
+    <section class="speakers" id="ponentes">
+      <h2 class="speakers_title" >PONENTES</h2>
+    <div class="speakers_img">
+      <div class="speakers_img_container container">
+          <a href="https://www.linkedin.com/in/alba-gg" target="_blank">
+            <img src="./assets/images/istockphoto-1328879352-612x612.jpg" class="speakers_img_container_unique img" alt="Nombre de la ponente"/>
+            <p class="name">Nombre ponente</p>
+          </a>
+      </div>
+      <div class="speakers_img_container container">
+        <a class="icon" href="https://www.linkedin.com/in/alba-gg" target="_blank">
+          <img src="./assets/images/istockphoto-1328879352-612x612.jpg" class="speakers_img_container_unique img" alt="Nombre de la ponente"/>
+          <p class="name">Nombre ponente</p>
+        </a>
+      </div>
+      <div class="speakers_img_container container" >
+        <a class="icon" href="https://www.linkedin.com/in/alba-gg" target="_blank">
+           <img src="./assets/images/istockphoto-1328879352-612x612.jpg" class="speakers_img_container_unique img" alt="Nombre de la ponente"/>
+           <p class="name">Nombre ponente</p>
+          </a>
+      </div>
+      <div class="speakers_img_container container">
+        <a class="icon" href="https://www.linkedin.com/in/alba-gg" target="_blank">
+            <img src="./assets/images/istockphoto-1328879352-612x612.jpg" class="speakers_img_container_unique img" alt="Nombre de la ponente"/>
+            <p class="name">Nombre ponente</p>
+          </a>
+      </div>
+      <div class="speakers_img_container container">
+        <a class="icon" href="https://www.linkedin.com/in/alba-gg" target="_blank">
+            <img src="./assets/images/istockphoto-1328879352-612x612.jpg" class="speakers_img_container_unique img" alt="Nombre de la ponente"/>
+            <p class="name">Nombre ponente</p>
+          </a>
+      </div>
+
+       <div class="speakers_img_container container">
+        <a class="icon" href="https://www.linkedin.com/in/alba-gg" target="_blank">
+              <img src="./assets/images/istockphoto-1328879352-612x612.jpg" class="speakers_img_container_unique img" alt="Nombre de la ponente"/>
+              <p class="name">Nombre ponente</p>
+          </a>
+      </div>
     </div>
-    <script src="./assets/js/main.js"></script>
-  </body>
+    <!-- <div class="modal_box hidden" id="modalWindow">
+      <div class="modal_text" id="modalText">
+      </div>
+    </div> -->
+    <a class="speakers_a" href="https://developers.google.com/womentechmakers" ><button type="button" name="speakers" class="speakers_button">¿Quieres participar en el evento?</button></a>
+    </section>
+
+    <section class="organitation">
+      <div class="conatiner">
+        <div class="container marga">
+          <div class="border marga">
+            <div class="content marga">1</div>
+          </div>
+        </div>
+        <!--fin marga-->
+
+        <div class="container ada">
+          <div class="border ada">
+            <div class="content ada">2</div>
+          </div>
+        </div>
+        <!--fin ada-->
+
+        <div class="container grace">
+          <div class="border grace">
+            <div class="content grace">3</div>
+          </div>
+        </div>
+        <!--fin grace-->
+
+        <div class="container ilus">
+          <div class="border ilus">
+            <div class="content ilus">4</div>
+          </div>
+        </div>
+        <!--fin ilus-->
+      </div>
+      <!--fin main-->
+    </section>
+
+    <section class="sponsors" >
+        <h2 class="sponsors_title" id="patrocinadores">PATROCINADORES</h2>
+      <div class="sponsors_img">
+        <div>
+            <a class="sponsors_img_a" href="https://gdg.community.dev/gdg-madrid/" target="_blank">
+              <img class="sponsors_img_unique" src="./assets/images/logo-gdg-removebg-preview.png"/>
+            </a>
+        </div>
+        <div>
+            <a class="sponsors_img_a" href="https://gdg.community.dev/gdg-madrid/" target="_blank">
+              <img class="sponsors_img_unique" src="./assets/images/logo-gdg-removebg-preview.png"/>
+            </a>
+        </div>
+        <div>
+            <a class="sponsors_img_a" href="https://gdg.community.dev/gdg-madrid/" target="_blank">
+              <img class="sponsors_img_unique" src="./assets/images/logo-gdg-removebg-preview.png"/>
+            </a>
+        </div>
+        <div>
+            <a class="sponsors_img_a" href="https://placehold.co/200x100" target="_blank">
+              <img class="sponsors_img_unique" src="./assets/images/logo-gdg-removebg-preview.png"/>
+            </a>
+        </div>
+        <div>
+            <a class="sponsors_img_a" href="https://gdg.community.dev/gdg-madrid/" target="_blank">
+              <img class="sponsors_img_unique" src="./assets/images/logo-gdg-removebg-preview.png"/>
+            </a>
+        </div>
+        <div>
+            <a class="sponsors_img_a" href="https://gdg.community.dev/gdg-madrid/" target="_blank">
+              <img class="sponsors_img_unique" src="./assets/images/logo-gdg-removebg-preview.png"/>
+            </a>
+        </div>
+      </div>
+      <a class="sponsors_a" href="https://developers.google.com/womentechmakers" ><button type="button" name="sponsors" class="sponsors_button">¿Quieres apoyarnos?</button></a>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer_section_content">
+      <section class="footer_section_rrss">
+        <a href="">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </section>
+    </div>
+    <div class="footer_section_content_c2">
+      <section class="footer_section_links">
+        <a href="">Contacto</a>
+        <a href="">Política de privacidad</a>
+        <a href="./codigo.html">Código de conducta</a>
+      </section>
+      <section class="footer_section_logo">
+        <img
+          class="footer_section_logo-img"
+          src="./assets/images/logo-wtm-blue.png"
+          alt="Logo Women TechMakers"
+        />
+      </section>
+    </div>
+    <span class="footer_section_copy">WTM &copy 2024</span>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
 </html>

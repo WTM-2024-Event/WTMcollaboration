@@ -1,114 +1,88 @@
-// // * {
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-// }
-// body {
-//   width: 100%;
-//   height: 100%;
+.orga {
+  width: 100%;
+  height: 100%;
+  &_h1 {
+    text-align: center;
+    @include textStyle($blue, $montserrat, 2rem, bold, 1.5rem);
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    left: 110px;
+  }
+  &_container {
+    position: relative;
+  }
+  &_cardBox {
+    font-size: 1.2em;
+    margin: 1% 0 0 1%;
+    perspective: 800px;
+    transition: all 0.3s ease 0s;
+    width: 23.7%;
+  }
+  &_cardBox:hover .adaCard {
+    transform: rotateY(180deg);
+  }
+  &_cardBox:hover .graceCard {
+    transform: rotateY(180deg);
+  }
+  &_.cardBox:hover .margaCard {
+    transform: rotateY(180deg);
+  }
+  &_cardBox:hover .ilusCard {
+    transform: rotateY(180deg);
+  }
+  &_cardBox:hover .adaCard2 {
+    transform: rotateY(180deg);
+  }
+  &_cardBox:hover .margaCard2 {
+    transform: rotateY(180deg);
+  }
+  &_adaCard,
+  &_graceard,
+  &_margaCard,
+  &_ilusCard,
+  &_adaCard2,
+  &_margaCard2 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin-bottom: 1.5rem;
+    background-size: cover;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: transform 0.4s ease 0s;
+  }
+  &_adaCard {
+    left: 90px;
+    top: 100px;
+    background-image: url('imagenes/ada100.jpg');
+  }
+  &_margaCard {
+    left: 200px;
+    top: 200px;
+    background-image: url('imagenes/hamilyon100-1.jpg');
+  }
+  &_graceCard {
+    left: 80px;
+    top: 300px;
+    background-image: url('imagenes/grace100.jpg');
+  }
+  &_ilusCard {
+    left: 200px;
+    top: 400px;
+    background-image: url('imagenes/ilus100.jpg');
+  }
+  &_adaCard2 {
+    left: 200px;
+    top: 600px;
+    background-image: url('imagenes/ada100.jpg');
+  }
+  &_margaCard2 {
+    left: 90px;
+    top: 500px;
+    background-image: url('imagenes/hamilyon100-1.jpg');
+  }
 
-//   background: #dfdfc3;
-//   overflow: hidden;
-// }
-
-// body .container .marga,
-// body .border .marga {
-//   width: 100px;
-//   height: 100px;
-//   /* background: #292929; */
-//   position: absolute;
-//   top: 40%;
-//   left: 40%;
-// }
-// body .container .border .marga,
-// body .border .border .marga {
-//   width: 80%;
-//   height: 80%;
-//   background-image: url('imagenes/hamilyon100-1.jpg');
-//   /* overflow: hidden; */
-//   transform: translate(-50%, -50%);
-
-//   -webkit-clip-path: polygon(
-//     0% 50%,
-//     25% 95%,
-//     75% 95%,
-//     100% 50%,
-//     75% 5%,
-//     25% 5%
-//   );
-//   clip-path: polygon(0% 50%, 25% 95%, 75% 95%, 100% 50%, 75% 5%, 25% 5%);
-//   -webkit-clip-path: polygon(
-//     50% 0%,
-//     95% 25%,
-//     95% 75%,
-//     50% 100%,
-//     5% 75%,
-//     5% 25%
-//   );
-//   clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-// }
-// body .container .ada,
-// body .border .ada {
-//   width: 100px;
-//   height: 100px;
-
-//   position: absolute;
-//   top: 50px;
-//   left: 50px;
-
-//   transform: translate(-50%, -50%);
-//   -webkit-clip-path: polygon(
-//     0% 50%,
-//     25% 95%,
-//     75% 95%,
-//     100% 50%,
-//     75% 5%,
-//     25% 5%
-//   );
-//   clip-path: polygon(0% 50%, 25% 95%, 75% 95%, 100% 50%, 75% 5%, 25% 5%);
-//   -webkit-clip-path: polygon(
-//     50% 0%,
-//     95% 25%,
-//     95% 75%,
-//     50% 100%,
-//     5% 75%,
-//     5% 25%
-//   );
-//   clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-// }
-// body .container .border .ada,
-// body .border .border .ada {
-//   width: 90%;
-//   height: 90%;
-//   background-image: url('imagenes/ada100.jpg');
-//   background-size: contain;
-// }
-
-// /* body .container .border .content,
-// body .border .border .content {
-//   width: 150%;
-//   height: 100%;
-//   background: #dfdfc3;
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   -webkit-animation: contentAnimation 2s infinite linear;
-//   animation: contentAnimation 2s infinite linear;
-//   transform-origin: center top;
-// } */
-// @-webkit-keyframes contentAnimation {
-//   0% {
-//     transform: translateX(-50%) rotate(0deg);
-//   }
-//   100% {
-//     transform: translateX(-50%) rotate(-360deg);
-//   }
-// }
-// @keyframes contentAnimation {
-//   0% {
-//     transform: translateX(-50%) rotate(0deg);
-//   }
-//   100% {
-//     transform: translateX(-50%) rotate(-360deg);
-//   }
-// }
+  &_shadow {
+    filter: drop-shadow(0 0 1rem);
+  }
+}

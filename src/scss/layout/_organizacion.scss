@@ -1,6 +1,6 @@
 .orga {
   width: 100%;
-  height: 100%;
+  height: 700px;
   &_h1 {
     text-align: center;
     @include textStyle($blue, $montserrat, 2rem, bold, 1.5rem);
@@ -52,34 +52,40 @@
     transition: transform 0.4s ease 0s;
   }
   &_adaCard {
-    left: 90px;
+    left: 40px;
     top: 100px;
-    background-image: url('imagenes/ada100.jpg');
+    background-image: url('../../images/ada100.jpg');
+    background-color: aqua;
   }
   &_margaCard {
     left: 200px;
     top: 200px;
     background-image: url('imagenes/hamilyon100-1.jpg');
+    background-color: blueviolet;
   }
   &_graceCard {
     left: 80px;
-    top: 300px;
+    top: 400px;
     background-image: url('imagenes/grace100.jpg');
+    background-color: cadetblue;
   }
   &_ilusCard {
     left: 200px;
     top: 400px;
     background-image: url('imagenes/ilus100.jpg');
+    background-color: cornflowerblue;
   }
   &_adaCard2 {
     left: 200px;
     top: 600px;
     background-image: url('imagenes/ada100.jpg');
+    background-color: coral;
   }
   &_margaCard2 {
     left: 90px;
     top: 500px;
     background-image: url('imagenes/hamilyon100-1.jpg');
+    background-color: lightseagreen;
   }
 
   &_shadow {

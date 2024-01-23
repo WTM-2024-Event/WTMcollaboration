@@ -6,7 +6,7 @@
     @include textStyle($blue, $montserrat, 2rem, bold, 1.5rem);
     position: absolute;
     text-align: center;
-    top: 10px;
+    top: 40px;
     left: 110px;
   }
   &_container {
@@ -25,7 +25,7 @@
   &_cardBox:hover .graceCard {
     transform: rotateY(180deg);
   }
-  &_.cardBox:hover .margaCard {
+  &_cardBox:hover .margaCard {
     transform: rotateY(180deg);
   }
   &_cardBox:hover .ilusCard {
@@ -38,7 +38,7 @@
     transform: rotateY(180deg);
   }
   &_adaCard,
-  &_graceard,
+  &_graceCard,
   &_margaCard,
   &_ilusCard,
   &_adaCard2,
@@ -54,42 +54,37 @@
   &_adaCard {
     left: 40px;
     top: 100px;
-    background-image: url('./assets/images/ada100.jpg');
+    background-image: url('../images/ada100.jpg');
     background-color: aqua;
-    &_img {
-      width: 100px;
-      height: 100px;
-      text-align: center;
-    }
   }
   &_margaCard {
     left: 200px;
     top: 200px;
-    background-image: url('imagenes/hamilyon100-1.jpg');
+    background-image: url('../images/hamilyon100-1.jpg');
     background-color: blueviolet;
   }
   &_graceCard {
-    left: 80px;
-    top: 400px;
-    background-image: url('imagenes/grace100.jpg');
+    left: 40px;
+    top: 300px;
+    background-image: url('../images/grace100.jpg');
     background-color: cadetblue;
   }
   &_ilusCard {
     left: 200px;
     top: 400px;
-    background-image: url('imagenes/ilus100.jpg');
+    background-image: url('../images/ilus100.jpg');
     background-color: cornflowerblue;
   }
   &_adaCard2 {
     left: 200px;
     top: 600px;
-    background-image: url('imagenes/ada100.jpg');
+    background-image: url('../images/ada100.jpg');
     background-color: coral;
   }
   &_margaCard2 {
-    left: 90px;
+    left: 40px;
     top: 500px;
-    background-image: url('imagenes/hamilyon100-1.jpg');
+    background-image: url('../images/hamilyon100-1.jpg');
     background-color: lightseagreen;
   }
 

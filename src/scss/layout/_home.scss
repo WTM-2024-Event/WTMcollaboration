@@ -1,4 +1,4 @@
-.info {
+.home {
   padding-block: 8rem 5rem;
   background-color: $turquoiseLight;
   display: flex;
@@ -8,19 +8,9 @@
     text-align: center;
     text-transform: uppercase;
     @include textStyle($blue, $montserrat, 2rem, bold, 1.5);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     @media (min-width: 768px) {
       font-size: 3.5rem;
-    }
-    &-h3 {
-      color: $blue;
-      font-family: $montserrat;
-      font-size: 1.5rem;
-      text-align: center;
-      margin-bottom: 8px;
-      @media (min-width: 768px) {
-        font-size: 2rem;
-      }
     }
   }
   &_section {
@@ -44,10 +34,11 @@
  
     }
     &-p {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       font-family: $montserrat;
       margin: 2rem 5rem;
       text-align: center;
+      line-height: 2.5;
       
       
     }

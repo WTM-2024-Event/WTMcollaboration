@@ -55,24 +55,24 @@
       }
     }
 
-    @media (min-width: 701px) and (max-width: 856px) {
+    @media (min-width: 701px) and (max-width: 876px) {
       :nth-of-type(3n + 1) {
         grid-column: 2 / span 2;
       }
     }
 
-    @media (min-width: 857px) and (max-width: 1033px) {
+    @media (min-width: 877px) and (max-width: 1056px) {
       :nth-of-type(4n + 1) {
         grid-column: 2 / span 2;
       }
     }
-    @media (min-width: 1034px) and (max-width: 1209px) {
+    @media (min-width: 1057px) and (max-width: 1237px) {
       :nth-of-type(5n + 1) {
         grid-column: 2 / span 2;
       }
     }
 
-    @media (min-width: 1210px) and (max-width: 1383px) {
+    @media (min-width: 1238px) and (max-width: 1383px) {
       :nth-of-type(6n + 1) {
         grid-column: 2 / span 2;
       }
@@ -83,6 +83,7 @@
         grid-column: 2 / span 2;
       }
     }
+    
     &-name {
       text-align: center;
       margin-top: 2rem;
@@ -127,10 +128,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     margin-bottom: 0;
-    color: #000000;
     visibility: hidden;
-    font-size: 3rem;
-    font-weight: bold;
+    @include textStyle(#000000, $montserrat, 3rem, bold, 3.5rem);
     text-transform: uppercase;
 }
 
@@ -141,7 +140,32 @@
 .container:hover .name{
   opacity: 1;
   visibility: visible;
-  color: #000000;
 }
 
+// .modal_box{
+//   display: flex;
+//   background-color: lightgrey;
+//   align-items: center;
+//   justify-content: center;
+//   position: fixed; 
+//   pointer-events: none;
+//   top: 0;
+//   left: 0;
+//   height: 100vh; 
+//   width: 100vw;
+
+// }
+
+// .modal_text{
+//  background-color: $white;
+//  width: 60rem;
+//  padding: 3rem 5rem;
+//  max-width: 100%;
+//  border-radius: 10px;
+//  text-align: center; 
+// }
+
+// .hidden{
+//   display: none;
+// }
 

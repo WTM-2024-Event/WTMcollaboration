@@ -105,26 +105,32 @@ const modalText = document.getElementById('modalText');
 const speakersInfo = {
   'Speaker 1': {
     name: 'Ainhoa',
+    image: './assets/images/ainhoaFlor.png',
     bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
   },
   'Speaker 2': {
     name: 'Alba',
+    image: './assets/images/AlbaFlor.png',
     bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
   },
   'Speaker 3': {
     name: 'Aranzazu',
+    image: './assets/images/aranzazuFlor.png',
     bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
   },
   'Speaker 4': {
     name: 'Cris',
+    image: './assets/images/crisFlor.png',
     bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
   },
   'Speaker 5': {
     name: 'Rachel',
+    image: './assets/images/rachelFlor.png',
     bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
   },
   'Speaker 6': {
     name: 'Mari Tere',
+    image: './assets/images/maritereFlor.png',
     bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
   },
 };
@@ -135,19 +141,20 @@ function speakerOpen(speaker) {
     const infoSpeaker = speakersInfo[speaker];
 
     modalText.innerHTML = `
-      <div class="modalBoxes__text_info" >
-        <h2 class="modalBoxes__text_info_title">${infoSpeaker.name}</h2>
-        <p class="modalBoxes__text_info_bio">${infoSpeaker.bio}</p>
-        <span>
-        <a class="speakers__img_name-icon" href="https://www.linkedin.com/in/alba-gg" target="_blank">
-          <i class="fa-brands fa-x-twitter"></i>
-        </a>
-        <a class="speakers__img_name-icon" href="https://www.linkedin.com/in/alba-gg" target="_blank">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-        </span>
-        <button class="modal__closed" onclick="speakerClosed()">Volver</button>
-        </div>`;
+    <div class="modalBoxes__text_info" >
+     <img src="${infoSpeaker.image}" alt="${infoSpeaker.name}" class="modal__imgM">
+     <h2 class="modalBoxes__text_info_title">${infoSpeaker.name}</h2>
+     <p class="modalBoxes__text_info_bio">${infoSpeaker.bio}</p>
+     <span>
+      <a class="speakers__img_name-icon" href="https://www.linkedin.com/in/alba-gg" target="_blank">
+       <i class="fa-brands fa-x-twitter"></i>
+      </a>
+      <a class="speakers__img_name-icon" href="https://www.linkedin.com/in/alba-gg" target="_blank">
+       <i class="fa-brands fa-linkedin"></i>
+      </a>
+     </span>
+    <button class="modal__closed" onclick="speakerClosed()">Volver</button>
+    </div>`;
 }
 
 function speakerClosed() {

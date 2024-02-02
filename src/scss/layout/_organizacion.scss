@@ -42,7 +42,7 @@
     &_name {
       text-align: center;
       margin-top: 2rem;
-      @include textStyle($black, $montserrat, 2rem, 0, 1.5rem);
+      @include textStyle($black, $montserrat, 1.8rem, 0, 1.5);
       &-p {
         margin-bottom: 1.5rem;
       }

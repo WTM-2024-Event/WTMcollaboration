@@ -43,7 +43,7 @@
     &_name{
       text-align: center;
       margin-top: 2rem;
-      @include textStyle($black, $montserrat, 2rem, 0, 1.5rem);
+      @include textStyle($black, $montserrat, 1.8rem, 0, 1.5);
       &-p{
         margin-bottom: 1.5rem;
       }
@@ -55,11 +55,12 @@
   }
 
   &_button {
+    transition-duration: 0.8s;
     @include dFlex(0, center, center);
     @include btn(none, 3rem, $blue);
     padding: 10px 15px;
     margin-inline: auto;
-    margin-top: 15rem;
+    margin-top: 10rem;
     margin-bottom: 5rem;
     @include textStyle($white, $montserrat, 1.5rem, $regular, 1.5);
     @media (min-width: 768px) {
@@ -71,7 +72,7 @@
   &_a {
     text-decoration: none;
     :hover {
-      background-color: $turquoise;
+      background-color: #4ec7ffc4;
       cursor: pointer;
     }
   }

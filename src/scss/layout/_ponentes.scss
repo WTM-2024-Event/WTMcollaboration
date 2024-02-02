@@ -78,38 +78,72 @@
 }
 
 .container{
-  text-align: center;
-  margin-bottom: 16px;
-  float: left;
-  position: relative;
+ 
+  cursor: pointer;
 }
 
 
 
-// .modal_box{
-//   display: flex;
-//   background-color: lightgrey;
-//   align-items: center;
-//   justify-content: center;
-//   position: fixed; 
-//   pointer-events: none;
-//   top: 0;
-//   left: 0;
-//   height: 100vh; 
-//   width: 100vw;
+.modalBoxes{
+  @include dFlex(column, center, center);
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%; 
+  background-color: $blackTransparent;
+  overflow: auto; 
+  
+  &__text{
+    background-color: $white;
+    width:70%;
+    padding: 3rem ;
+    max-width: 70%;
+    border-radius: 10px;
+    text-align: center; 
+    gap: 2rem; 
+    @media (min-width: 768px) {
+     width: 60rem;
+   }
+   @media (min-width: 1024px) {
+     width: 70rem;
+     @include dFlex(column, center, center);
+   }
+   &_info{
+    @include dFlex(column, center, center);
+    @include textStyle($black, $montserrat, 1.5rem, regular, 1.2);
+    margin-bottom: 2.5rem;
+   
+    @media (min-width: 768px) {
+      font-size: 1.8rem;
+      margin-top: 2rem;
+      margin-inline: 3rem;
+    }
+    &_title{
+      margin-bottom: 1.5rem;
+    }
+    &_bio{
+      margin-bottom: 1.5rem;
+    }
+   }
+   }
+}
 
-// }
 
-// .modal_text{
-//  background-color: $white;
-//  width: 60rem;
-//  padding: 3rem 5rem;
-//  max-width: 100%;
-//  border-radius: 10px;
-//  text-align: center; 
-// }
+.modal__closed{
+  @include textStyle($grey, $montserrat, 1.6rem, regular, 1.5);
+    @include btn(none, 3rem, $blue100);
+    text-decoration: none;
+    padding: 0.5rem 2.5rem;
+    cursor: pointer;
+    margin-top: 2rem; 
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
+}
 
-// .hidden{
-//   display: none;
-// }
-
+.hid{
+  display: none;
+}

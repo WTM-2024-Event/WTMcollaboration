@@ -98,3 +98,60 @@ function closeModal() {
 
   localStorage.removeItem('modalShown');
 }
+
+const modalBox = document.getElementById('modalBox');
+const modalText = document.getElementById('modalText');
+
+const speakersInfo = {
+  'Speaker 1': {
+    name: 'Nombre ponente',
+    bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
+  },
+  'Speaker 2': {
+    name: 'Nombre ponente',
+    bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
+  },
+  'Speaker 3': {
+    name: 'Nombre ponente',
+    bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
+  },
+  'Speaker 4': {
+    name: 'Nombre ponente',
+    bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
+  },
+  'Speaker 5': {
+    name: 'Nombre ponente',
+    bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
+  },
+  'Speaker 6': {
+    name: 'Nombre ponente',
+    bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
+  },
+};
+
+function speakerOpen(speaker) {
+  modalBox.classList.remove('hid');
+
+    const infoSpeaker = speakersInfo[speaker];
+
+    modalText.innerHTML = `
+      <div class="modalBoxes__text_info" >
+        <h2 class="modalBoxes__text_info_title">${infoSpeaker.name}</h2>
+        <p class="modalBoxes__text_info_bio">${infoSpeaker.bio}</p>
+        <span>
+        <a class="speakers__img_name-icon" href="https://www.linkedin.com/in/alba-gg" target="_blank">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a class="speakers__img_name-icon" href="https://www.linkedin.com/in/alba-gg" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        </span>
+        <button class="modal__closed" onclick="speakerClosed()">Volver</button>
+        </div>`;
+}
+
+function speakerClosed() {
+  modalBox.classList.add('hid');
+  modalText.innerHTML = '';
+}
+

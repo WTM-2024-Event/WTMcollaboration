@@ -279,20 +279,15 @@
 
     </section>
     <section class="speakers" id="ponentes">
-      <h2 class="speakers__title">PONENTES</h2>
-      <div class="speakers__img">
-        <div>
-          <div class="speakers__img_container container">
-            <a>
-              <img src="./assets/images/ainhoaSFlor.png" class="speakers__img_container_unique img"
-                alt="Nombre de la ponente" />
-            </a>
+      <h2 class="speakers__title" >PONENTES</h2>
+    <div class="speakers__img">
+      <div>
+          <div class="speakers__img_container container"  onclick="speakerOpen('Speaker 1')" id="speaker1">
+             <img src="./assets/images/ainhoaSFlor.png" class="speakers__img_container_unique img" alt="Nombre de la ponente" />
           </div>
           <div class="speakers__img_name">
             <p class="speakers__img_name-p">Nombre ponente</p>
-            <a class="speakers__img_name-icon" href="../codigo.html" target="_blank">
               <i class="fa-brands fa-x-twitter"></i>
-            </a>
             <a class="speakers__img_name-icon" href="https://www.linkedin.com/in/alba-gg" target="_blank">
               <i class="fa-brands fa-linkedin"></i>
             </a>
@@ -300,8 +295,8 @@
         </div>
 
         <div>
-          <div class="speakers__img_container container">
-            <img src="./assets/images/Alba.png" class="speakers__img_container_unique img" alt="Nombre de la ponente" />
+          <div class="speakers__img_container container" onclick="speakerOpen('Speaker 2')" id="speaker2">
+            <img src="./assets/images/Alba.png" class="speakers__img_container_unique img" alt="Nombre de la ponente"/>
           </div>
           <div class="speakers__img_name">
             <p class="speakers__img_name-p">Nombre ponente</p>
@@ -315,8 +310,8 @@
         </div>
 
         <div>
-          <div class="speakers__img_container container">
-            <img src="./assets/images/Aranzazu.png" class="speakers__img_container_unique img" alt="Nombre de la ponente" />
+          <div class="speakers__img_container container" onclick="speakerOpen('Speaker 3')" id="speaker3">
+            <img src="./assets/images/Aranzazu.png" class="speakers__img_container_unique img" alt="Nombre de la ponente"/>
           </div>
           <div class="speakers__img_name">
             <p class="speakers__img_name-p">Nombre ponente</p>
@@ -330,9 +325,8 @@
         </div>
 
         <div>
-          <div class="speakers__img_container container">
-            <img src="./assets/images/crisSFlor.png" class="speakers__img_container_unique img"
-              alt="Nombre de la ponente" />
+          <div class="speakers__img_container container" onclick="speakerOpen('Speaker 4')" id="speaker4">
+            <img src="./assets/images/crisSFlor.png" class="speakers__img_container_unique img" alt="Nombre de la ponente"/>
           </div>
           <div class="speakers__img_name">
             <p class="speakers__img_name-p">Nombre ponente</p>
@@ -346,9 +340,8 @@
         </div>
 
         <div>
-          <div class="speakers__img_container container">
-            <img src="./assets/images/rachelSFlor.png" class="speakers__img_container_unique img"
-              alt="Nombre de la ponente" />
+          <div class="speakers__img_container container" onclick="speakerOpen('Speaker 5')" id="speaker5">
+            <img src="./assets/images/rachelSFlor.png" class="speakers__img_container_unique img" alt="Nombre de la ponente"/>
           </div>
           <div class="speakers__img_name">
             <p class="speakers__img_name-p">Nombre ponente</p>
@@ -362,9 +355,8 @@
         </div>
 
         <div>
-          <div class="speakers__img_container container">
-            <img src="./assets/images/mariTereFlor.png" class="speakers__img_container_unique img"
-              alt="Nombre de la ponente" />
+          <div class="speakers__img_container container" onclick="speakerOpen('Speaker 6')" id="speaker6">
+            <img src="./assets/images/mariTereSFlor.png" class="speakers__img_container_unique img" alt="Nombre de la ponente"/>
           </div>
           <div class="speakers__img_name">
             <p class="speakers__img_name-p">Nombre ponente</p>
@@ -376,16 +368,18 @@
             </a>
           </div>
         </div>
+    </div>
+    <div class="modalBoxes hid" id="modalBox">
+      <div class="modalBoxes__text" id="modalText">
+        <!-- <button class="modal__closed hidden" onclick="speakerClosed()">Volver</button> -->
       </div>
-      <!-- <div class="modal_box hidden" id="modalWindow">
-      <div class="modal_text" id="modalText">
-      </div>
-    </div> -->
-      <a class="speakers_a" href="
+    </div>
+
+    <a class="speakers_a" href="
     https://docs.google.com/forms/d/e/1FAIpQLScCy3eS1xD6hr7Qk7qXLyJc3xjqn4j56GfH6mf2quHjBqe9zQ/viewform
-    " target="_blank"><button type="button" name="speakers" class="speakers_button">¿Quieres participar en el
-          evento?</button></a>
+    " target="_blank" ><button type="button" name="speakers" class="speakers_button">¿Quieres participar en el evento?</button></a>
     </section>
+
     <section class="organitation" id="organizacion">
       <h2 class="organitation__title">ORGANIZACIÓN</h2>
       <div class="organitation__img">
@@ -497,7 +491,7 @@
         <div class="sponsors__img_level_pla">
           <div>
             <a class="sponsors__img_level_a" href="https://www.capgemini.com/es-es/" target="_blank">
-              <img class="sponsors__img_level_unique" src="./assets/images/Capgemini.png" />
+              <img class="sponsors__img_level_unique" src="./assets/images/Capgemini.png" alt="Logo Capgemini"/>
             </a>
           </div>
           <div>
@@ -511,8 +505,8 @@
         <hr class="sponsors__line">
         <div class="sponsors__img_level_pla">
           <div>
-            <a class="sponsors__img_level_a" href="https://es.audiense.com/" target="_blank">
-              <img class="sponsors__img_level_unique gold" src="./assets/images/Audiense.png" />
+            <a class="sponsors__img_level_a" href="https://es.audiense.com/" target="_blank" >
+              <img class="sponsors__img_level_unique gold" src="./assets/images/Audiense.png" alt="Logo Audiense"/>
             </a>
           </div>
           <div>

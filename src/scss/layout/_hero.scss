@@ -34,13 +34,14 @@
       &-img {
         width: 15rem;
         @media (max-height: 600px){width: 10rem;}
+        @media (min-width: 600px){width: 16rem;}
         @media (min-width: 900px){width: 30rem;}
       }
       &_ul{
         list-style-type: none;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         gap: 3rem;
         @media (min-width: 600px){
@@ -68,11 +69,11 @@
             @media (min-width: 900px){width: 13rem;}
           }
           &-p{
-            @include textStyle($blue500, $montserrat, 1.8rem, $bold, 1);
-            @media (min-width: 450px){font-size: 2.2rem;}
+            @include textStyle($blue500, $montserrat, 1.5rem, $bold, 1);
+            @media (min-width: 900px){font-size: 2.2rem;}
             &-span{
-              @include textStyle($blue500, $montserrat, 1.4rem, $bold, 1);
-              @media (min-width: 450px){font-size: 1.5rem;}
+              @include textStyle($blue500, $montserrat, 1.3rem, $semiBold, 1);
+              @media (min-width: 900px){font-size: 1.5rem;}
             }
           }
         }

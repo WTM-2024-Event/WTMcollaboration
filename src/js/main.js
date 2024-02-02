@@ -104,27 +104,27 @@ const modalText = document.getElementById('modalText');
 
 const speakersInfo = {
   'Speaker 1': {
-    name: 'Nombre ponente',
+    name: 'Ainhoa',
     bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
   },
   'Speaker 2': {
-    name: 'Nombre ponente',
+    name: 'Alba',
     bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
   },
   'Speaker 3': {
-    name: 'Nombre ponente',
+    name: 'Aranzazu',
     bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
   },
   'Speaker 4': {
-    name: 'Nombre ponente',
+    name: 'Cris',
     bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
   },
   'Speaker 5': {
-    name: 'Nombre ponente',
+    name: 'Rachel',
     bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
   },
   'Speaker 6': {
-    name: 'Nombre ponente',
+    name: 'Mari Tere',
     bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
   },
 };

@@ -17,7 +17,7 @@ toggleButton.onclick = () => {
 const ponentesInfo = {
   'Ponente 1': {
     name: 'Cristina rodríguez',
-    image: './images/crisFlor.png',
+    image: './assets/images/crisFlor.png',
     title: 'Cómo teletrabajar en un networking',
     place: '(Madrid, 1991)',
     bio: 'Breve biografía del Ponente 1.',
@@ -25,7 +25,7 @@ const ponentesInfo = {
   },
   'Ponente 2': {
     name: 'Ainhoa de las Heras',
-    image: './images/ainhoaFlor.png',
+    image: './assets/images/ainhoaFlor.png',
     title: 'Cómo teletrabajar en un networking',
     place: '(Barcelona, 1991)',
     bio: 'Breve biografía del Ponente 2.',
@@ -33,7 +33,7 @@ const ponentesInfo = {
   },
   'Ponente 3': {
     name: 'Raquel Ortiz',
-    image: './images/rachelFlor.png',
+    image: './assets/images/rachelFlor.png',
     title: 'Cómo teletrabajar en un networking',
     place: '(Barcelona, 1991)',
     bio: 'Breve biografía del Ponente 3.',
@@ -41,7 +41,7 @@ const ponentesInfo = {
   },
   'Ponente 4': {
     name: 'Alba Ginés',
-    image: './images/defaultFlor.png',
+    image: './assets/images/defaultFlor.png',
     title: 'Cómo teletrabajar en un networking',
     place: '(Barcelona, 1991)',
     bio: 'Breve biografía del Ponente 4.',
@@ -49,7 +49,7 @@ const ponentesInfo = {
   },
   'Ponente 5': {
     name: 'Aranzazu Barrutia',
-    image: './images/defaultFlor.png',
+    image: './assets/images/defaultFlor.png',
     title: 'Cómo teletrabajar en un networking',
     place: '(Barcelona, 1991)',
     bio: 'Breve biografía del Ponente 5.',
@@ -57,7 +57,7 @@ const ponentesInfo = {
   },
   'Ponente 6': {
     name: 'Paula Gonzalez',
-    image: './images/defaultFlor.png',
+    image: './assets/images/defaultFlor.png',
     title: 'Cómo teletrabajar en un networking',
     place: '(Barcelona, 1991)',
     bio: 'Breve biografía del Ponente 6.',

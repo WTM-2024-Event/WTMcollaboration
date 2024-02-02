@@ -48,7 +48,7 @@
       }
       &-icon {
         color: $black;
-        margin-left: 1rem; 
+        margin-left: 1rem;
       }
     }
   }
@@ -81,6 +81,20 @@
   margin-bottom: 16px;
   float: left;
   position: relative;
+}
+
+.lineOrganization {
+  @include textStyle($black, $montserrat, 2rem, $regular, 1.5rem);
+  margin-bottom: 3rem;
+  margin-top: 5rem;
+  text-align: center;
+  &__line{
+    height: 3px;
+    background-color: $black;
+    width: 70%;
+    margin-inline: auto; 
+    margin-bottom: 2rem;
+  }
 }
 
 // .modal_box{

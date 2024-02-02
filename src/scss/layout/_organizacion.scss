@@ -22,7 +22,7 @@
     gap: 3rem;
     margin-inline: auto;
 
-    &_container {
+    &_containerOrg {
       justify-content: center;
       align-items: center;
       height: 200px;
@@ -52,36 +52,8 @@
       }
     }
   }
-
-  &_button {
-    @include dFlex(0, center, center);
-    @include btn(none, 3rem, $blue);
-    padding: 10px 15px;
-    margin-inline: auto;
-    margin-top: 15rem;
-    margin-bottom: 5rem;
-    @include textStyle($white, $montserrat, 1.5rem, $regular, 1.5);
-    @media (min-width: 768px) {
-      font-size: 2rem;
-      padding: 15px 20px;
-    }
-  }
-
-  &_a {
-    text-decoration: none;
-    :hover {
-      background-color: $turquoise;
-      cursor: pointer;
-    }
-  }
 }
 
-.container {
-  text-align: center;
-  margin-bottom: 16px;
-  float: left;
-  position: relative;
-}
 
 .lineOrganization {
   @include textStyle($black, $montserrat, 2rem, $regular, 1.5rem);

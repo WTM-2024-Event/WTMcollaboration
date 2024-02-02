@@ -10,6 +10,17 @@ toggleButton.onclick = () => {
   toggleButton.classList.toggle('close');
 };
 
+// Scroll
+document.addEventListener('DOMContentLoaded', function() {
+  const logo = document.querySelector('.navbar_a-logo');
+
+  window.addEventListener('scroll', function() {
+    const isScrolled = window.scrollY > 50;
+
+    logo.src = isScrolled ? './assets/images/Logo-negro.png' :' ./assets/images/Logo-blanco.png';
+  });
+});
+
 // Modales Ponentes
 
 // Objeto que almacena la información de los ponentes

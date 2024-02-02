@@ -1,106 +1,77 @@
 .footer {
   background-image: linear-gradient(to bottom, #4ec7ffc4, #00cfb4be);
-  padding: 20px;
-  width: 100%;
-  height: auto;
+  padding: 2rem;
   text-align: center;
+  padding-block: 3rem;
 
-  &_section_content {
+  &_content {
     display: flex;
-    flex-direction: column;
-  }
-  &_section_rrss {
-    display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
-  }
-  &_section_rrss a {
-    color: $white;
-    margin: 5px 15px;
-    transition: color 0.3s, transform 0.3s;
+    gap: 2.5rem;
+
     @media (min-width: 768px) {
-      margin: 5px 20px;
+      margin-left: 3.5rem;
     }
-  }
-  &_section_rrss a:hover {
-    color: $blue;
-    transform: rotate(360deg);
-  }
-  &_section_rrss i {
-    font-size: 2rem;
-    @media (min-width: 768px) {
+
+    &-icons {
+      color: $white;
       font-size: 2.5rem;
-    }
-  }
-
-  /*c2*/
-  &_section_content_c2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @media (min-width: 768px) {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  }
-  &_section_links {
-    margin: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @media (min-width: 768px) {
-      align-items: flex-start;
-      margin-left: 30px;
-    }
-  }
-  &_section_links a {
-    margin: 10px;
-    font-size: 1.4rem;
-    color: $black;
-    font-family: $montserrat;
-    text-decoration: none;
-    @media (min-width: 768px) {
-      font-size: 1.6rem;
-    }
-  }
-
-  &_section_links i {
-    color: $white;
-    font-size: 2rem;
-    margin-left: 1rem;
-    transition: color 0.3s, transform 0.3s;
-  }
-
-  &_section_links i:hover {
-    color: $blue;
-    transform: rotate(360deg);
-  }
-
-  &_section_logo {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    &-img {
-      width: 15rem;
-      filter: drop-shadow(2px 2px 3px $white);
-      -webkit-filter: drop-shadow(2px 2px 3px $white);
-      @media (min-width: 768px) {
-        width: 20rem;
-        margin-right: 30px;
+      transition: color 0.3s, transform 0.3s;
+      
+      &:hover {
+        color: $blue;
+        transform: rotate(360deg);
       }
     }
   }
+}
 
-  &_section_copy {
+.sectionFT {
+  @media (min-width: 768px) {
     display: flex;
-    color: $black;
-    font-family: $montserrat;
-    justify-content: center;
-    margin-top: 20px;
-    font-size: 1.2rem;
-    @media (min-width: 768px) {
-      font-size: 1.4rem;
+    justify-content: space-around;
+  }
+}
+
+.fContainer {
+  &_fTitle {
+    @include textStyle($white, $montserrat, 2rem, 500, 1.2);
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &_fText {
+    @include textStyle($white, $montserrat, 1.5rem, 500, 1.2);
+    margin-bottom: 1rem;
+  }
+
+  &_fText2 {
+    @include textStyle($white, $montserrat, 1.2rem, 300, 1.2);
+    margin-bottom: 1.5rem;
+  }
+
+  &_fEmail {
+    @include textStyle($white, $montserrat, 1.2rem, 400, 1.2);
+    margin-bottom: 1.5rem;
+    margin-inline: 0.5rem;
+
+    &:hover {
+      color: $blue;
     }
   }
+
+  &_fTextCopy {
+    @include textStyle($white, $montserrat, 1.3rem, 300, 1.5);
+    margin-bottom: 1.5rem;
+    margin-top: 3.5rem;
+    text-wrap: pretty;
+    @media (min-width: 768px) {
+      margin-left: 4.5rem;
+    }
+  }
+}
+
+.contact{
+  color:$white;
 }

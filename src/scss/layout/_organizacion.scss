@@ -1,94 +1,111 @@
-.orga {
-  width: 100%;
-  height: 700px;
-  &_h1 {
+.organitation {
+  padding-block: 8rem 5rem;
+  background-color: $white;
+
+  &__title {
     text-align: center;
+    text-transform: uppercase;
     @include textStyle($blue, $montserrat, 2rem, bold, 1.5rem);
-    position: absolute;
-    text-align: center;
-    top: 40px;
-    left: 110px;
-  }
-  &_container {
-    position: relative;
-  }
-  &_cardBox {
-    font-size: 1.2em;
-    margin: 1% 0 0 1%;
-    perspective: 800px;
-    transition: all 0.3s ease 0s;
-    width: 23.7%;
-  }
-  &_cardBox:hover .adaCard {
-    transform: rotateY(180deg);
-  }
-  &_cardBox:hover .graceCard {
-    transform: rotateY(180deg);
-  }
-  &_cardBox:hover .margaCard {
-    transform: rotateY(180deg);
-  }
-  &_cardBox:hover .ilusCard {
-    transform: rotateY(180deg);
-  }
-  &_cardBox:hover .adaCard2 {
-    transform: rotateY(180deg);
-  }
-  &_cardBox:hover .margaCard2 {
-    transform: rotateY(180deg);
-  }
-  &_adaCard,
-  &_graceCard,
-  &_margaCard,
-  &_ilusCard,
-  &_adaCard2,
-  &_margaCard2 {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    margin-bottom: 1.5rem;
-    background-size: cover;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    transition: transform 0.4s ease 0s;
-  }
-  &_adaCard {
-    left: 40px;
-    top: 100px;
-    background-image: url('../images/ada100.jpg');
-    background-color: aqua;
-  }
-  &_margaCard {
-    left: 200px;
-    top: 200px;
-    background-image: url('../images/hamilyon100-1.jpg');
-    background-color: blueviolet;
-  }
-  &_graceCard {
-    left: 40px;
-    top: 300px;
-    background-image: url('../images/grace100.jpg');
-    background-color: cadetblue;
-  }
-  &_ilusCard {
-    left: 200px;
-    top: 400px;
-    background-image: url('../images/ilus100.jpg');
-    background-color: cornflowerblue;
-  }
-  &_adaCard2 {
-    left: 200px;
-    top: 600px;
-    background-image: url('../images/ada100.jpg');
-    background-color: coral;
-  }
-  &_margaCard2 {
-    left: 40px;
-    top: 500px;
-    background-image: url('../images/hamilyon100-1.jpg');
-    background-color: lightseagreen;
+    margin-bottom: 8rem;
+    @media (min-width: 768px) {
+      font-size: 3.5rem;
+    }
   }
 
-  &_shadow {
-    filter: drop-shadow(0 0 1rem);
+  &__img {
+    width: 85%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-inline: auto;
+
+    &_container {
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      width: 200px;
+      @media (min-width: 768px) {
+        height: 280px;
+        width: 280px;
+      }
+
+      &_unique {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &_name {
+      text-align: center;
+      margin-top: 2rem;
+      @include textStyle($black, $montserrat, 2rem, 0, 1.5rem);
+      &-p {
+        margin-bottom: 1.5rem;
+      }
+      &-icon {
+        color: $black;
+        margin-left: 1rem; 
+      }
+    }
+  }
+
+  &_button {
+    @include dFlex(0, center, center);
+    @include btn(none, 3rem, $blue);
+    padding: 10px 15px;
+    margin-inline: auto;
+    margin-top: 15rem;
+    margin-bottom: 5rem;
+    @include textStyle($white, $montserrat, 1.5rem, $regular, 1.5);
+    @media (min-width: 768px) {
+      font-size: 2rem;
+      padding: 15px 20px;
+    }
+  }
+
+  &_a {
+    text-decoration: none;
+    :hover {
+      background-color: $turquoise;
+      cursor: pointer;
+    }
   }
 }
+
+.container {
+  text-align: center;
+  margin-bottom: 16px;
+  float: left;
+  position: relative;
+}
+
+// .modal_box{
+//   display: flex;
+//   background-color: lightgrey;
+//   align-items: center;
+//   justify-content: center;
+//   position: fixed;
+//   pointer-events: none;
+//   top: 0;
+//   left: 0;
+//   height: 100vh;
+//   width: 100vw;
+
+// }
+
+// .modal_text{
+//  background-color: $white;
+//  width: 60rem;
+//  padding: 3rem 5rem;
+//  max-width: 100%;
+//  border-radius: 10px;
+//  text-align: center;
+// }
+
+// .hidden{
+//   display: none;
+// }

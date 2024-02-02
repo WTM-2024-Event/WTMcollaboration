@@ -10,8 +10,6 @@ toggleButton.onclick = () => {
   toggleButton.classList.toggle('close');
 };
 
-
-
 // Modales Ponentes
 
 // Objeto que almacena la información de los ponentes
@@ -19,7 +17,7 @@ toggleButton.onclick = () => {
 const ponentesInfo = {
   'Ponente 1': {
     name: 'Cristina rodríguez',
-    image: './assets/images/cris.png',
+    image: './images/crisFlor.png',
     title: 'Cómo teletrabajar en un networking',
     place: '(Madrid, 1991)',
     bio: 'Breve biografía del Ponente 1.',
@@ -27,7 +25,7 @@ const ponentesInfo = {
   },
   'Ponente 2': {
     name: 'Ainhoa de las Heras',
-    image: './assets/images/ainhoa.jpg',
+    image: './images/ainhoaFlor.png',
     title: 'Cómo teletrabajar en un networking',
     place: '(Barcelona, 1991)',
     bio: 'Breve biografía del Ponente 2.',
@@ -35,7 +33,7 @@ const ponentesInfo = {
   },
   'Ponente 3': {
     name: 'Raquel Ortiz',
-    image: './assets/images/Rachel.jpg',
+    image: './images/rachelFlor.png',
     title: 'Cómo teletrabajar en un networking',
     place: '(Barcelona, 1991)',
     bio: 'Breve biografía del Ponente 3.',
@@ -43,7 +41,7 @@ const ponentesInfo = {
   },
   'Ponente 4': {
     name: 'Alba Ginés',
-    image: './assets/images/istockphoto-1328879352-612x612.jpg',
+    image: './images/defaultFlor.png',
     title: 'Cómo teletrabajar en un networking',
     place: '(Barcelona, 1991)',
     bio: 'Breve biografía del Ponente 4.',
@@ -51,7 +49,7 @@ const ponentesInfo = {
   },
   'Ponente 5': {
     name: 'Aranzazu Barrutia',
-    image: './assets/images/istockphoto-1328879352-612x612.jpg',
+    image: './images/defaultFlor.png',
     title: 'Cómo teletrabajar en un networking',
     place: '(Barcelona, 1991)',
     bio: 'Breve biografía del Ponente 5.',
@@ -59,19 +57,19 @@ const ponentesInfo = {
   },
   'Ponente 6': {
     name: 'Paula Gonzalez',
-    image: './assets/images/istockphoto-1328879352-612x612.jpg',
+    image: './images/defaultFlor.png',
     title: 'Cómo teletrabajar en un networking',
     place: '(Barcelona, 1991)',
     bio: 'Breve biografía del Ponente 6.',
-    info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus',
+    info: '¿Qué podemos hacer en nuestro día a día para salvar al planeta? El tema de la sostenibilidad también aplica a la informática. <br>El Green Computing es un área de la informática que estudia el uso de los recursos y su impacto ambiental. <br>Entonces, ¿podemos hacer nuestro trabajo más sostenible? ¿Y es el trabajo en remoto siempre más sostenible? <br>Vamos a ver una introducción al Green Computing y que podemos hacer cotidianamente para aportar nuestro granito de arena al medioambiente.',
   },
 };
 
-function openModal(ponente) {
-  const modal = document.getElementById('myModal');
-  const modalContent = document.getElementById('modalContent');
+const modal = document.getElementById('myModal');
+const modalContent = document.getElementById('modalContent');
 
-  modal.classList.remove ('hidden');
+function openModal(ponente) {
+  modal.classList.remove('hidden');
 
   const modalShown = localStorage.getItem('modalShown');
   if (!modalShown) {
@@ -86,7 +84,6 @@ function openModal(ponente) {
       </div>
       <div class="modal__column text-column">
         <h3 class="modal__titleP">${info.title}</h3>
-        <p class="modal__text"><b>${info.place}</b> ${info.bio}</p>
         <p class="modal__text">${info.info}</p>
         <button class="modal__close" onclick="closeModal()">Volver</button>
       </div>`;
@@ -96,52 +93,8 @@ function openModal(ponente) {
 }
 
 function closeModal() {
-  const modalContent = document.getElementById('modalContent');
-
-  myModal.classList.add ('hidden');
+  modal.classList.add('hidden');
   modalContent.innerHTML = '';
-  
+
   localStorage.removeItem('modalShown');
 }
-
-
-
-// const speakersSocials = {
-//   'Ponente 3': {
-//     name: 'Alba Ginés',
-//     linkedin: 'https://www.linkedin.com/in/alba-gg/',
-//     twitter: 'https://twitter.com/developerdrm',
-//   }
- 
-// };
-
-// function openModalSocials(speaker) {
-//   const modalContainer = document.getElementById('modalWindow');
-//   const modalText = document.getElementById('modalText');
-
-//   modalContainer.classList.remove ('hidden');
-//   const infoSpeaker = speakersSocials[speaker];
-//   modalText.innerHTML = `
-//       </div> 
-//         <h2 class="speaker__name">${infoSpeaker.name}</h2>
-//       </div>
-//       <div class="speaker__socials">
-//         <a href="${infoSpeaker.linkedin}">
-//           <i class="fa-brands fa-linkedin"></i>
-//         </a>
-//         <a href="${infoSpeaker.twitter}">
-//           <i class="fa-brands fa-x-twitter"></i>
-//         </a>
-//         <button class="modal__close" onclick="closeModalSocials()"">Volver</button>
-//       </div>`;
-//   }
-
-
-// function closeModalSocials() {
-//   const modalText = document.getElementById('modalText');
-//   const modalContainer = document.getElementById('modalWindow');
-
-//   modalContainer.classList.add ('hidden');
-//   modalText.innerHTML = '';
-
-// }

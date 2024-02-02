@@ -11,13 +11,19 @@
 
 .titleDiary {
   @include dFlex(column, 0, center);
-  @include textStyle(#2480f0, $montserrat, 2rem, bold, 1.5rem);
-  @include margin(0, 5rem);
+  @include textStyle($blue, $montserrat, 2rem, bold, 1.5);
+  @include padding(0, 2rem);
+  margin-top: 4rem;
+  // border: solid 1px black;
+  // background-color: $blue100;
+  // border-top-left-radius: 5rem;
+  // border-top-right-radius: 5rem;
   text-transform: uppercase;
   padding-top: 2rem;
 
   @media (min-width: 768px) {
-    font-size: 3.5rem;
+    font-size: 3rem;
+    @include padding(0, 3rem);
   }
 }
 
@@ -26,7 +32,9 @@
   @include margin(2rem, 0);
   @include padding(2rem, 2rem);
   background-color: $background1;
-  border-radius: 1.3rem;
+  border-radius: 2rem;
+  // border-bottom-left-radius: 2rem;
+  // border-bottom-right-radius: 2rem;
   gap: 1rem;
   flex-wrap: wrap;
 
@@ -37,7 +45,7 @@
     width: 80rem;
   }
   @media (min-width: 1440px) {
-    width: 105rem;
+    width: 100rem;
   }
 
   &__cel {
@@ -50,18 +58,16 @@
     text-align: center;
     @include dFlex(column, space-between, 0);
     flex: 0 0 auto;
-    background-image: linear-gradient(140deg, $blue 0%, #00cfb4be 100%);
-
-    //background-image: linear-gradient(to bottom, #00cfb4be, $blue);
-    //border: 0.1rem solid $green;
-    border-radius: 1.3rem;
-    @include textStyle($white, $montserrat, 1rem, semiregular, 1.2);
+    background-color: $blue100;
+    border-radius: 1.2rem;
+    border:0.1rem solid black;
+    @include textStyle($black, $montserrat, 1rem, 300, 1.2);
     @include padding(1rem, 1rem);
     &--ent {
-      @include textStyle($white, $montserrat, 1.3rem, bold, 1.2);
+      @include textStyle($black, $montserrat, 1.2rem, 400, 1.2);
 
       @media (min-width: 768px) {
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
     }
 
@@ -76,32 +82,48 @@
     flex-direction: column;
     background: $background1;
     @include padding(2.5rem, 0.6rem);
-    @include textStyle($grey, $montserrat, 1.3rem, regular, 1.5);
-    border-radius: 1.3rem;
+    @include textStyle($grey, $montserrat, 1.3rem, regular, 1);
+    border-radius: 1rem;
     text-align: center;
     flex: 1 1 auto;
 
     @media (min-width: 768px) {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
     }
   }
 
   &__presentations {
-    @include dFlex(0, center, center);
+    @include dFlex(0, center, 0);
     flex-direction: column;
-    background-image: linear-gradient(10deg, #00cfb4be 0%, $blue 100%);
-    @include padding(2.5rem, 1.6rem);
-    @include textStyle($white, $montserrat, 1.3rem, 500, 1);
+    background-color: $white;
+    @include padding(1.5rem, 1.5rem);
+    @include textStyle($black, $montserrat, 1.2rem, 500, 1.2);
     cursor: pointer;
-    border-radius: 1.3rem;
+    border-radius: 1rem;
     text-align: center;
     flex: 1 1 auto;
+    :last-child {
+      @include textStyle($black, $montserrat, 1.2rem, 300, 1);
+      margin-top: 0.8rem;
+      // text-align: end;
+      // margin-right: 1.5rem;
+      @media (min-width: 768px) {
+        //margin-right: 2rem;
+        font-size: 1.3rem;
+      }
+      // @media (min-width: 1024px) {
+      //   margin-right: 10rem;
+      // }
+      // @media (min-width: 1440px) {
+      //   margin-right: 20rem;
+      // }
+    }
 
     &:hover {
       box-shadow: 5px 5px 10px $blackTransparent;
     }
     @media (min-width: 768px) {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
     }
   }
 }
@@ -116,7 +138,7 @@
   @include dFlex(column, center, center);
 
   &__container {
-    filter: drop-shadow(0 0 7rem #4fd5b0);
+    filter: drop-shadow(0 0 7rem $blue400);
     text-align: center;
     background-color: $white;
     border-radius: 2.5rem;
@@ -135,18 +157,18 @@
   &__imgM {
     width: 18rem;
     margin-bottom: 1.5rem;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    //clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   }
 
   &__name {
     margin-bottom: 1.5rem;
-    @include textStyle($blue, $montserrat, 1.5rem, $bold, 1.5);
+    @include textStyle($blue, $montserrat, 1.3rem, $bold, 1.5);
     text-transform: uppercase;
-    filter: drop-shadow(0 0 2px #4fd5b0);
+    //filter: drop-shadow(0 0 2px #4fd5b0);
   }
 
   &__titleP {
-    @include textStyle($blue500, $montserrat, 1.5rem, bold, 1.2);
+    @include textStyle($black, $montserrat, 1.5rem, bold, 1.2);
     margin-bottom: 2.5rem;
     @media (min-width: 768px) {
       font-size: 1.8rem;
@@ -163,12 +185,13 @@
   }
 
   &__text {
-    @include textStyle($black, $montserrat, 1.2rem, regular, 1.5);
+    @include textStyle($black, $montserrat, 1.2rem, regular, 1.6);
     margin-bottom: 2.5rem;
-    text-align: justify;
+    text-align: left;
+    text-wrap:pretty;
     @media (min-width: 768px) {
       margin-inline: 3rem;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
     }
   }
 
@@ -184,67 +207,17 @@
     }
   }
 }
-.shadow {
-  filter: drop-shadow(0 0 10px $turquoiseDark);
-}
+// .shadow {
+//   filter: drop-shadow(0 0 10px $blue300);
+// }
 
 .hidden {
   display: none;
 }
 
-// .container {
-//   display: flex;
-//   justify-content: center;
-//   position: relative;
-//   &__asterisk {
-//     width: 15rem;
-//     position: absolute;
-//     top: 10rem;
-//     left: -2rem;
-//     position:-webkit-sticky;
-//     @media (min-width: 375px) {
-//       top: 60rem;
-//       bottom: 20rem;
-//       left: -2rem;
-//     }
-//     @media (min-width: 768px) {
-//       width: 25rem;
-//       top: 55rem;
-//     }
-//   }
-// }
-
-// // .asterisk {
-// //   width: 15rem;
-// //   height: 15rem;
-// //   position: absolute;
-// //   top: 130rem;
-// //   left: -5rem;
-
-// //   @media (min-width: 375px) {
-// //     width: 15rem;
-// //     height: 15rem;
-// //     top: 120rem;
-// //     left: -5rem;
-// //   }
-
-// //   @media (min-width: 425px) {
-// //     width: 18rem;
-// //     height: 18rem;
-// //     top: 115rem;
-// //     left: -5rem;
-// //   }
-
-// //   @media (min-width: 768px) {
-// //     width: 20rem;
-// //     height: 20rem;
-// //     top: 105rem;
-// //     left: -5rem;
-// //   }
-// //   @media (min-width: 1024px) {
-// //     width: 30rem;
-// //     height: 30rem;
-// //     top: 105rem;
-// //     left: -5rem;
-// //   }
-// // }
+br {
+  content: "";
+  display: block;
+  margin-top: 0.8rem;
+ }
+ 

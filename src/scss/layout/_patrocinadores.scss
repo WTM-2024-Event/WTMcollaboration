@@ -37,7 +37,7 @@
       &_pla {
         @include dFlex(row, center, center);
         flex-wrap: wrap;
-        margin-block: 3rem;
+        margin-block: 5rem;
       }
     }
   }
@@ -80,6 +80,6 @@
 .silver {
   width: 10rem;
   @media (min-width: 768px) {
-    width: 15rem;
+    width: 17rem;
   }
 }

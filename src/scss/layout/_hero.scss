@@ -7,12 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (min-width: 1500px){
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 20rem;
-  }
+  
     &_box{
       background-color: rgba(255, 255, 255, 0.884);
       width: 80%;
@@ -34,7 +29,7 @@
       &-img {
         width: 15rem;
         @media (max-height: 600px){width: 10rem;}
-        @media (min-width: 600px){width: 16rem;}
+        @media (min-width: 600px){width: 25rem;}
         @media (min-width: 900px){width: 30rem;}
       }
       &_ul{

@@ -17,15 +17,14 @@
     max-width: 1200px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     gap: 3rem;
     margin-inline: auto;
-   
 
     &_container {
       justify-content: center;
-      align-items: center; 
+      align-items: center;
       height: 200px;
       width: 200px;
       @media (min-width: 768px) {
@@ -37,19 +36,19 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        }
       }
-    
-    &_name{
+    }
+
+    &_name {
       text-align: center;
       margin-top: 2rem;
       @include textStyle($black, $montserrat, 1.8rem, 0, 1.5);
-      &-p{
+      &-p {
         margin-bottom: 1.5rem;
       }
-      &-icon{
+      &-icon {
         color: $black;
-        margin-left: 1rem; 
+        margin-left: 1rem;
       }
     }
   }
@@ -78,72 +77,72 @@
   }
 }
 
-.container{
+.container {
   cursor: pointer;
 }
 
-
-
-.modalBoxes{
+.modalBoxes {
   @include dFlex(column, center, center);
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
   z-index: 1;
   width: 100%;
-  height: 100%; 
+  height: 100%;
   background-color: $blackTransparent;
-  overflow: auto; 
-  
-  &__text{
+  overflow: auto;
+
+  &__text {
+    filter: drop-shadow(0 0 7rem $blue400);
     background-color: $white;
-    width:70%;
-    padding: 3rem ;
+    width: 70%;
+    padding: 3rem;
     max-width: 70%;
     border-radius: 10px;
-    text-align: center; 
-    gap: 2rem; 
+    text-align: center;
+    gap: 2rem;
     @media (min-width: 768px) {
-     width: 60rem;
-   }
-   @media (min-width: 1024px) {
-     width: 70rem;
-     @include dFlex(column, center, center);
-   }
-   &_info{
-    @include dFlex(column, center, center);
-    @include textStyle($black, $montserrat, 1.5rem, regular, 1.2);
-    margin-bottom: 2.5rem;
-   
-    @media (min-width: 768px) {
-      font-size: 1.8rem;
-      margin-top: 2rem;
-      margin-inline: 3rem;
+      width: 60rem;
     }
-    &_title{
-      margin-bottom: 1.5rem;
+    @media (min-width: 1024px) {
+      width: 70rem;
+      @include dFlex(column, center, center);
     }
-    &_bio{
-      margin-bottom: 1.5rem;
+    &_info {
+      @include dFlex(column, center, center);
+      @include textStyle($black, $montserrat, 1.2rem, regular, 1.2);
+      margin-bottom: 2.5rem;
+
+      @media (min-width: 768px) {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        margin-inline: 3rem;
+      }
+      &_title {
+        @include textStyle($blue, $montserrat, 1.5rem, $bold, 1.5);
+    text-transform: uppercase;
+        margin-bottom: 1.5rem;
+      }
+      &_bio {
+        margin-bottom: 1.5rem;
+      }
     }
-   }
-   }
+  }
 }
 
-
-.modal__closed{
+.modal__closed {
   @include textStyle($grey, $montserrat, 1.6rem, regular, 1.5);
-    @include btn(none, 3rem, $blue100);
-    text-decoration: none;
-    padding: 0.5rem 2.5rem;
-    cursor: pointer;
-    margin-top: 2rem; 
-    &:hover {
-      background-color: $blue;
-      color: $white;
-    }
+  @include btn(none, 3rem, $blue100);
+  text-decoration: none;
+  padding: 0.5rem 2.5rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  &:hover {
+    background-color: $blue;
+    color: $white;
+  }
 }
 
-.hid{
+.hid {
   display: none;
 }

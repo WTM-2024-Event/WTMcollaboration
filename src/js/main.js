@@ -11,13 +11,15 @@ toggleButton.onclick = () => {
 };
 
 // Scroll
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const logo = document.querySelector('.navbar_a-logo');
 
-  window.addEventListener('scroll', function() {
+  window.addEventListener('scroll', function () {
     const isScrolled = window.scrollY > 50;
 
-    logo.src = isScrolled ? './assets/images/Logo-negro.png' :' ./assets/images/Logo-blanco.png';
+    logo.src = isScrolled
+      ? './assets/images/Logo-negro.png'
+      : ' ./assets/images/Logo-blanco.png';
   });
 });
 
@@ -33,6 +35,8 @@ const ponentesInfo = {
     place: '(Madrid, 1991)',
     bio: 'Breve biografía del Ponente 1.',
     info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
+    twitter:'https://www.linkedin.com/in/alba-gg',
+    linkedin:'https://www.linkedin.com/in/alba-gg'
   },
   'Ponente 2': {
     name: 'Ainhoa de las Heras',
@@ -41,6 +45,8 @@ const ponentesInfo = {
     place: '(Barcelona, 1991)',
     bio: 'Breve biografía del Ponente 2.',
     info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus',
+    twitter:'https://www.linkedin.com/in/alba-gg',
+    linkedin:'https://www.linkedin.com/in/alba-gg'
   },
   'Ponente 3': {
     name: 'Raquel Ortiz',
@@ -49,6 +55,8 @@ const ponentesInfo = {
     place: '(Barcelona, 1991)',
     bio: 'Breve biografía del Ponente 3.',
     info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus',
+    twitter:'https://www.linkedin.com/in/alba-gg',
+    linkedin:'https://www.linkedin.com/in/alba-gg'
   },
   'Ponente 4': {
     name: 'Alba Ginés',
@@ -57,6 +65,8 @@ const ponentesInfo = {
     place: '(Barcelona, 1991)',
     bio: 'Breve biografía del Ponente 4.',
     info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus',
+    twitter:'https://www.linkedin.com/in/alba-gg',
+    linkedin:'https://www.linkedin.com/in/alba-gg'
   },
   'Ponente 5': {
     name: 'Aranzazu Barrutia',
@@ -65,6 +75,8 @@ const ponentesInfo = {
     place: '(Barcelona, 1991)',
     bio: 'Breve biografía del Ponente 5.',
     info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus',
+    twitter:'https://www.linkedin.com/in/alba-gg',
+    linkedin:'https://www.linkedin.com/in/alba-gg'
   },
   'Ponente 6': {
     name: 'Paula Gonzalez',
@@ -73,6 +85,8 @@ const ponentesInfo = {
     place: '(Barcelona, 1991)',
     bio: 'Breve biografía del Ponente 6.',
     info: '¿Qué podemos hacer en nuestro día a día para salvar al planeta? El tema de la sostenibilidad también aplica a la informática. <br>El Green Computing es un área de la informática que estudia el uso de los recursos y su impacto ambiental. <br>Entonces, ¿podemos hacer nuestro trabajo más sostenible? ¿Y es el trabajo en remoto siempre más sostenible? <br>Vamos a ver una introducción al Green Computing y que podemos hacer cotidianamente para aportar nuestro granito de arena al medioambiente.',
+    twitter:'https://www.linkedin.com/in/alba-gg',
+    linkedin:'https://www.linkedin.com/in/alba-gg'
   },
 };
 
@@ -82,11 +96,9 @@ const modalContent = document.getElementById('modalContent');
 function openModal(ponente) {
   modal.classList.remove('hidden');
 
-  const modalShown = localStorage.getItem('modalShown');
-  if (!modalShown) {
-    const info = ponentesInfo[ponente];
+  const info = ponentesInfo[ponente];
 
-    modalContent.innerHTML = `
+  modalContent.innerHTML = `
       <div class="modal__column img-column">
       <div class="shadow">
         <img src="${info.image}" alt="${info.name}" class="modal__imgM">
@@ -98,69 +110,31 @@ function openModal(ponente) {
         <p class="modal__text">${info.info}</p>
         <button class="modal__close" onclick="closeModal()">Volver</button>
       </div>`;
-
-    localStorage.setItem('modalShown', 'true');
-  }
 }
 
 function closeModal() {
   modal.classList.add('hidden');
   modalContent.innerHTML = '';
-
-  localStorage.removeItem('modalShown');
 }
 
 const modalBox = document.getElementById('modalBox');
 const modalText = document.getElementById('modalText');
 
-const speakersInfo = {
-  'Speaker 1': {
-    name: 'Ainhoa',
-    image: './assets/images/ainhoaFlor.png',
-    bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
-  },
-  'Speaker 2': {
-    name: 'Alba',
-    image: './assets/images/AlbaFlor.png',
-    bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
-  },
-  'Speaker 3': {
-    name: 'Aranzazu',
-    image: './assets/images/aranzazuFlor.png',
-    bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
-  },
-  'Speaker 4': {
-    name: 'Cris',
-    image: './assets/images/crisFlor.png',
-    bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
-  },
-  'Speaker 5': {
-    name: 'Rachel',
-    image: './assets/images/rachelFlor.png',
-    bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
-  },
-  'Speaker 6': {
-    name: 'Mari Tere',
-    image: './assets/images/maritereFlor.png',
-    bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, veniam consequuntur. Sapiente vitae minima sequi laboriosam expedita distinctio iure quasi natus ratione, eum quia autem aut fugiat ipsum perferendis possimus!',
-  },
-};
-
-function speakerOpen(speaker) {
+function speakerOpen(ponente) {
   modalBox.classList.remove('hid');
 
-    const infoSpeaker = speakersInfo[speaker];
+  const info = ponentesInfo[ponente];
 
-    modalText.innerHTML = `
+  modalText.innerHTML = `
     <div class="modalBoxes__text_info" >
-     <img src="${infoSpeaker.image}" alt="${infoSpeaker.name}" class="modal__imgM">
-     <h2 class="modalBoxes__text_info_title">${infoSpeaker.name}</h2>
-     <p class="modalBoxes__text_info_bio">${infoSpeaker.bio}</p>
+     <img src="${info.image}" alt="${info.name}" class="modal__imgM">
+     <h2 class="modalBoxes__text_info_title">${info.name}</h2>
+     <p class="modalBoxes__text_info_bio"><strong>${info.place}</strong> ${info.bio}</p>
      <span>
-      <a class="speakers__img_name-icon" href="https://www.linkedin.com/in/alba-gg" target="_blank">
+      <a class="speakers__img_name-icon" href="${info.twitter}" target="_blank">
        <i class="fa-brands fa-x-twitter"></i>
       </a>
-      <a class="speakers__img_name-icon" href="https://www.linkedin.com/in/alba-gg" target="_blank">
+      <a class="speakers__img_name-icon" href="${info.linkedin}" target="_blank">
        <i class="fa-brands fa-linkedin"></i>
       </a>
      </span>
@@ -172,4 +146,3 @@ function speakerClosed() {
   modalBox.classList.add('hid');
   modalText.innerHTML = '';
 }
-

@@ -10,7 +10,7 @@ toggleButton.onclick = () => {
 };
 
 // Obtener todos los enlaces del menú
-const menuLinks = document.querySelectorAll('.navbar_items-menu-a');
+const menuLinks = document.querySelectorAll('.js-menu');
 
 // Controlador de eventos para cada enlace del menú
 menuLinks.forEach(link => {

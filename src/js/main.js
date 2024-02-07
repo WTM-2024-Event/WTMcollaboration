@@ -6,9 +6,22 @@ const itemsContainer = document.querySelector('.navbar_items');
 
 toggleButton.onclick = () => {
   itemsContainer.classList.toggle('open');
-
   toggleButton.classList.toggle('close');
 };
+
+// Obtener todos los enlaces del menú
+const menuLinks = document.querySelectorAll('.navbar_items-menu-a');
+
+// Controlador de eventos para cada enlace del menú
+menuLinks.forEach(link => {
+  link.onclick = () => {
+    // Remover la clase 'open' del contenedor de elementos
+    itemsContainer.classList.remove('open');
+    // Remover la clase 'close' del botón de alternar
+    toggleButton.classList.remove('close');
+  };
+});
+
 
 // Scroll
 document.addEventListener('DOMContentLoaded', function () {
